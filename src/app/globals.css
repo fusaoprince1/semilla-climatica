@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0f0d;
+  --foreground: #e8f5e9;
+  --primary: #0d4f3c;
+  --primary-light: #2e7d5a;
+  --accent: #f4a024;
+  --accent-hover: #ffb74d;
+  --surface: #111916;
+  --surface-light: #1a2420;
+  --muted: #8ba898;
+  --danger: #e53935;
+  --border: #1e2e28;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-surface: var(--surface);
+  --color-surface-light: var(--surface-light);
+  --color-muted: var(--muted);
+  --color-danger: var(--danger);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-outfit);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f4a024 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-glow {
+  background: radial-gradient(
+    ellipse 80% 50% at 50% -20%,
+    rgba(13, 79, 60, 0.4) 0%,
+    transparent 70%
+  );
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(13, 79, 60, 0.3);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
