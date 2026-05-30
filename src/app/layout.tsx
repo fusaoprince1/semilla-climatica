@@ -15,7 +15,12 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  SITE.url;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${SITE.name} — Fondo climático permanente en México`,
     template: `%s | ${SITE.name}`,
@@ -24,8 +29,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: SITE.name,
     description: SITE.description,
+    url: siteUrl,
+    siteName: SITE.name,
     locale: "es_MX",
     type: "website",
+  },
+  alternates: {
+    canonical: siteUrl,
   },
 };
 
