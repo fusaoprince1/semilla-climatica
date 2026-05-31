@@ -23,7 +23,7 @@ export default function Hero() {
             <span className="gradient-text">otro verano récord</span>
           </h1>
 
-          <p className="mt-6 text-lg text-muted leading-relaxed sm:text-xl">
+          <p className="text-on-wallpaper mt-6 text-lg leading-relaxed sm:text-xl">
             Un fondo permanente para comprar soluciones hoy, crear las de
             mañana, y exigir acción política real.
           </p>
@@ -32,7 +32,7 @@ export default function Hero() {
             ¿Cuánto gastaste hoy en snacks? $20 van al clima.
           </p>
 
-          <p className="mt-2 text-sm text-muted">
+          <p className="text-on-wallpaper-soft mt-2 text-sm font-medium">
             Badge verificado + tu nombre en el Muro Digital al instante.
           </p>
 
@@ -51,17 +51,17 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-muted">
-            <span className="flex items-center gap-2">
-              <Shield className="h-4 w-4 text-primary-light" />
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <span className="trust-pill flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-on-wallpaper">
+              <Shield className="icon-on-wallpaper h-4 w-4 shrink-0" />
               Pagos seguros Mercado Pago
             </span>
-            <span className="flex items-center gap-2">
-              <Target className="h-4 w-4 text-primary-light" />
+            <span className="trust-pill flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-on-wallpaper">
+              <Target className="icon-on-wallpaper h-4 w-4 shrink-0" />
               Metas públicas
             </span>
-            <span className="flex items-center gap-2">
-              <FileText className="h-4 w-4 text-primary-light" />
+            <span className="trust-pill flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-on-wallpaper">
+              <FileText className="icon-on-wallpaper h-4 w-4 shrink-0" />
               Reportes al alcanzar metas
             </span>
           </div>

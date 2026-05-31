@@ -48,7 +48,7 @@ export default async function Plan() {
           <h2 className="font-display text-3xl font-bold sm:text-4xl">
             Nuestro plan en 3 fases
           </h2>
-          <p className="mt-4 text-muted leading-relaxed">
+          <p className="text-on-wallpaper-soft mt-4 text-lg leading-relaxed">
             Comprar, crear e influir. Un camino claro de acción climática en
             México.
           </p>

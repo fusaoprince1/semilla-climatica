@@ -18,7 +18,7 @@ export default function TransparencyPreview() {
               Cada peso,{" "}
               <span className="gradient-text">cuenta y se ve</span>
             </h2>
-            <p className="mt-4 text-muted leading-relaxed">
+            <p className="text-on-wallpaper-soft mt-4 text-lg leading-relaxed">
               La confianza es la base de todo. Publicamos exactamente cómo se
               distribuye cada donación — sin letra chica, sin sorpresas.
             </p>

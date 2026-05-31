@@ -70,6 +70,31 @@ body {
   backdrop-filter: blur(12px);
 }
 
+.text-on-wallpaper {
+  color: color-mix(in srgb, var(--foreground) 97%, white);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.9),
+    0 2px 14px rgba(0, 0, 0, 0.65);
+}
+
+.text-on-wallpaper-soft {
+  color: color-mix(in srgb, var(--foreground) 92%, white);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.85),
+    0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+.trust-pill {
+  background: color-mix(in srgb, var(--background) 78%, transparent);
+  backdrop-filter: blur(10px);
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+}
+
+.icon-on-wallpaper {
+  color: #8fe8b0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.95));
+}
+
 .card-glow:hover {
   box-shadow: 0 0 30px rgba(13, 79, 60, 0.3);
 }
