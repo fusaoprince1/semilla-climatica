@@ -5,10 +5,10 @@ import type { SectionWallpaper } from "@/lib/section-images";
 export type BackdropOverlay = "hero" | "soft" | "medium" | "heavy";
 
 const overlayClass: Record<BackdropOverlay, string> = {
-  hero: "bg-gradient-to-b from-background/55 via-background/78 to-background/92",
-  soft: "bg-background/80",
-  medium: "bg-background/85",
-  heavy: "bg-background/90",
+  hero: "bg-gradient-to-b from-background/15 via-background/40 to-background/68",
+  soft: "bg-background/48",
+  medium: "bg-background/55",
+  heavy: "bg-background/60",
 };
 
 type Props = {
@@ -37,7 +37,7 @@ export default function SectionBackdrop({
           fill
           priority={priority}
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-center saturate-[1.12] brightness-[1.08]"
         />
         <div className={`absolute inset-0 ${overlayClass[overlay]}`} />
       </div>

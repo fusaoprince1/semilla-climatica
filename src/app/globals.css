@@ -55,19 +55,19 @@ body {
 .hero-glow {
   background: radial-gradient(
     ellipse 80% 50% at 50% -20%,
-    rgba(13, 79, 60, 0.4) 0%,
+    rgba(13, 79, 60, 0.22) 0%,
     transparent 70%
   );
 }
 
 .surface-glass {
-  background: color-mix(in srgb, var(--surface) 88%, transparent);
-  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  backdrop-filter: blur(12px);
 }
 
 .card-glass {
-  background: color-mix(in srgb, var(--background) 90%, transparent);
-  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--background) 94%, transparent);
+  backdrop-filter: blur(12px);
 }
 
 .card-glow:hover {
