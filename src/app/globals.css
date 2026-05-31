@@ -64,6 +64,11 @@ body {
   box-shadow: 0 0 30px rgba(13, 79, 60, 0.3);
 }
 
+.card-glow-accent:hover {
+  box-shadow: 0 0 32px rgba(244, 160, 36, 0.4);
+  border-color: rgba(244, 160, 36, 0.45);
+}
+
 @keyframes float {
   0%,
   100% {
