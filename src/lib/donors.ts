@@ -97,6 +97,36 @@ export async function getFundStats(): Promise<FundStats> {
   };
 }
 
+export async function getDonorById(id: string): Promise<Donor | null> {
+  const accessToken = process.env.MP_ACCESS_TOKEN;
+  if (!accessToken || !/^\d+$/.test(id)) return null;
+
+  try {
+    const client = new MercadoPagoConfig({ accessToken });
+    const payment = new Payment(client);
+    const p = await payment.get({ id });
+
+    if (p.status !== "approved") return null;
+
+    const parsed = parseExternalReference(p.external_reference);
+    if (!parsed) return null;
+
+    const amount = p.transaction_amount ?? 0;
+    if (amount < 20) return null;
+
+    return {
+      id: String(p.id),
+      name: parsed.name,
+      amount,
+      date: p.date_approved ?? p.date_created ?? new Date().toISOString(),
+      city: parsed.city || undefined,
+      founder: amount >= 500,
+    };
+  } catch {
+    return null;
+  }
+}
+
 export function buildExternalReference(
   name: string,
   amount: number,

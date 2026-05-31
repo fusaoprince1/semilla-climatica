@@ -15,10 +15,10 @@ export default async function LiveDonors() {
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
             <h2 className="font-display text-2xl font-bold sm:text-3xl">
-              Semilleros recientes
+              Ya sembraron
             </h2>
             <p className="mt-2 text-muted">
-              Personas reales que ya plantaron su semilla.
+              Toca un nombre para ver y compartir su badge.
             </p>
           </div>
           <Link

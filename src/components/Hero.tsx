@@ -1,11 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Shield, Target, FileText } from "lucide-react";
-import { getFundStats } from "@/lib/donors";
-import FundProgress from "@/components/FundProgress";
 
-export default async function Hero() {
-  const stats = await getFundStats();
-
+export default function Hero() {
   return (
     <section className="hero-glow relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
       <div className="absolute inset-0 -z-10">
@@ -15,14 +11,6 @@ export default async function Hero() {
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-6 flex flex-col items-center gap-3">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary-light">
-              <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-              Fondo climático permanente · México
-            </div>
-            {stats.donorCount > 0 && <FundProgress stats={stats} compact />}
-          </div>
-
           <h1 className="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             México no puede esperar{" "}
             <span className="gradient-text">otro verano récord</span>

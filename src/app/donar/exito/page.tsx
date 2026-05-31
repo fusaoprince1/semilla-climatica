@@ -1,5 +1,6 @@
 import { revalidateTag } from "next/cache";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import DonationBadge from "@/components/DonationBadge";
 import { parseDonorReference } from "@/lib/site";
 
@@ -9,6 +10,7 @@ type Props = {
     external_reference?: string;
     status?: string;
     collection_status?: string;
+    payment_id?: string;
   }>;
 };
 
@@ -16,16 +18,21 @@ export default async function ExitoPage({ searchParams }: Props) {
   const params = await searchParams;
   const ref = params.ref || params.external_reference || null;
   const status = params.status || params.collection_status;
+  const paymentId = params.payment_id;
   const { name, amount } = parseDonorReference(ref);
 
   if (status === "approved" || !status) {
     revalidateTag("donors", "max");
   }
 
+  if (paymentId && (status === "approved" || !status)) {
+    redirect(`/badge/${paymentId}?welcome=1`);
+  }
+
   return (
     <div className="pt-28 pb-20 sm:pt-36">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <DonationBadge name={name} amount={amount || 20} />
+        <DonationBadge name={name} amount={amount || 20} paymentId={paymentId} />
         <p className="mt-8 text-center text-xs text-muted">
           Tu nombre aparecerá en el Muro Digital en los próximos minutos.
         </p>

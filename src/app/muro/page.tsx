@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getDonors } from "@/lib/donors";
-import DonorGrid from "@/components/DonorGrid";
+import MuroWithSearch from "@/components/MuroWithSearch";
 
 export const metadata: Metadata = {
   title: "Muro Digital",
   description:
-    "Cada donante que planta su semilla queda registrado. Conoce a quienes ya están construyendo el futuro climático de México.",
+    "Cada donante que planta su semilla queda registrado. Busca tu nombre y comparte tu badge.",
 };
 
 export default async function MuroPage() {
@@ -20,13 +20,8 @@ export default async function MuroPage() {
             Muro Digital
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            Cada persona que dona desde $20 queda registrada aquí
-            automáticamente. Los miembros fundadores ($500+) tendrán prioridad
-            para el mural conmemorativo en CDMX (Fase 3).
-          </p>
-          <p className="mt-2 text-sm font-medium text-accent">
-            {donors.length} semillero{donors.length !== 1 ? "s" : ""} registrado
-            {donors.length !== 1 ? "s" : ""}
+            Cada persona que dona desde $20 queda registrada aquí. Toca tu nombre
+            para ver, imprimir o compartir tu badge.
           </p>
         </div>
 
@@ -35,7 +30,7 @@ export default async function MuroPage() {
           demás.
         </div>
 
-        <DonorGrid donors={donors} />
+        <MuroWithSearch donors={donors} />
 
         <div className="mt-14 rounded-2xl border border-border bg-surface p-8 text-center">
           <h2 className="font-display text-xl font-semibold">
