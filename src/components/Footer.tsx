@@ -52,7 +52,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-muted">
               <li>Aviso de privacidad (próximamente)</li>
               <li>Términos de donación (próximamente)</li>
-              <li>contacto@semillaclimatica.mx</li>
+              <li>contacto@semillaclimatica.com</li>
             </ul>
           </div>
         </div>

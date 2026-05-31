@@ -3,7 +3,7 @@ export const SITE = {
   tagline: "Un fondo permanente para el clima en México",
   description:
     "Construimos un fondo climático permanente para comprar soluciones hoy, crear las de mañana, y exigir acción política real en México.",
-  url: "https://semillaclimatica.mx",
+  url: "https://semillaclimatica.com",
 };
 
 export const DONATION_TIERS = [

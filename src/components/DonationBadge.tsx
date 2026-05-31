@@ -11,7 +11,7 @@ type Props = {
 export default function DonationBadge({ name, amount }: Props) {
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/^https?:\/\//, "") ||
-    "semillaclimatica.mx";
+    "semillaclimatica.com";
 
   return (
     <div className="mx-auto max-w-md text-center">
