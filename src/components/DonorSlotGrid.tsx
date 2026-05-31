@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { Crown, Leaf, Share2 } from "lucide-react";
+import { Crown, Leaf, Share2, Award } from "lucide-react";
 import type { Donor } from "@/lib/donors";
 import PlaceholderDonorCard from "@/components/PlaceholderDonorCard";
 import type { DisplaySlot } from "@/lib/display-donors";
 import { formatDonorDate } from "@/lib/dates";
+import { getDonorTier } from "@/lib/tiers";
 
 function RealDonorCard({
   donor,
@@ -12,28 +13,38 @@ function RealDonorCard({
   donor: Donor;
   compact?: boolean;
 }) {
+  const tier = getDonorTier(donor.amount);
   return (
     <Link
       href={`/badge/${donor.id}`}
       className={`block shrink-0 rounded-xl border p-4 transition hover:scale-[1.02] ${
         compact ? "w-[calc(50%-6px)] min-w-[160px] sm:w-[calc(25%-9px)]" : ""
       } ${
-        donor.founder
+        tier === "fundador"
           ? "border-accent/40 bg-accent/5 ring-1 ring-accent/20 hover:ring-accent/40"
-          : "border-border bg-surface hover:border-primary/40"
+          : tier === "premium"
+            ? "border-primary-light/40 bg-primary/5 ring-1 ring-primary-light/20"
+            : "border-border bg-surface hover:border-primary/40"
       }`}
     >
       <div className="flex items-start justify-between">
         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/20">
-          {donor.founder ? (
+          {tier === "fundador" ? (
             <Crown className="h-4 w-4 text-accent" />
+          ) : tier === "premium" ? (
+            <Award className="h-4 w-4 text-primary-light" />
           ) : (
             <Leaf className="h-4 w-4 text-primary-light" />
           )}
         </div>
-        {donor.founder && (
+        {tier === "fundador" && (
           <span className="rounded-full bg-accent/20 px-2 py-0.5 text-[10px] font-bold text-accent">
             FUNDADOR
+          </span>
+        )}
+        {tier === "premium" && (
+          <span className="rounded-full bg-primary/20 px-2 py-0.5 text-[10px] font-bold text-primary-light">
+            PREMIUM
           </span>
         )}
       </div>

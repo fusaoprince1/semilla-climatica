@@ -27,9 +27,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!Number.isFinite(amount) || amount < 20) {
+    if (!Number.isFinite(amount) || amount < 20 || amount > 100_000) {
       return NextResponse.json(
-        { error: "El monto mínimo es $20 MXN." },
+        { error: "Monto inválido. Mínimo $20, máximo $100,000 MXN." },
         { status: 400 }
       );
     }

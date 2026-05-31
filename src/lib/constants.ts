@@ -17,24 +17,27 @@ export const DONATION_TIERS = [
   {
     amount: 50,
     label: "Una comida",
-    description: "Todo lo anterior + certificado digital de donante",
-    perks: ["Badge compartible", "Muro Digital", "Certificado digital"],
+    description: "Badge + Muro Digital con reconocimiento visible",
+    perks: ["Badge compartible", "Nombre en el Muro Digital"],
   },
   {
     amount: 150,
     label: "Un fin de semana",
-    description: "Reconocimiento destacado en el Muro Digital",
-    perks: ["Badge premium", "Destacado en Muro", "Certificado digital"],
+    description: "Badge premium + certificado digital + destacado en el Muro",
+    perks: [
+      "Badge premium",
+      "Certificado digital",
+      "Destacado en el Muro Digital",
+    ],
   },
   {
     amount: 500,
     label: "Miembro fundador",
-    description: "Prioridad para mural físico en CDMX (Fase 3)",
+    description: "Badge fundador + certificado + prioridad mural CDMX (Fase 3)",
     perks: [
       "Badge fundador",
-      "Destacado permanente",
-      "Prioridad mural CDMX",
-      "Reporte trimestral",
+      "Certificado digital",
+      "Prioridad mural Reforma (Fase 3)",
     ],
   },
 ];

@@ -32,6 +32,7 @@ export default async function BadgePage({ params, searchParams }: Props) {
         <DonationBadge
           name={donor.name}
           amount={donor.amount}
+          date={donor.date}
           paymentId={donor.id}
           showThankYou={welcome === "1"}
         />

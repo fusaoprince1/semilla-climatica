@@ -49,7 +49,7 @@ export default function Rewards() {
               Desde $500 MXN
             </h3>
             <p className="mt-2 text-sm text-muted">
-              Miembro fundador + prioridad para mural en Reforma (Fase 3)
+              Badge fundador + certificado + prioridad mural Reforma (Fase 3)
             </p>
           </div>
         </div>
