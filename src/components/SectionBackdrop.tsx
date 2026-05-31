@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 import type { SectionWallpaper } from "@/lib/section-images";
 
@@ -14,7 +13,6 @@ const overlayClass: Record<BackdropOverlay, string> = {
 type Props = {
   wallpaper: SectionWallpaper;
   overlay?: BackdropOverlay;
-  priority?: boolean;
   id?: string;
   className?: string;
   children: ReactNode;
@@ -23,21 +21,20 @@ type Props = {
 export default function SectionBackdrop({
   wallpaper,
   overlay = "medium",
-  priority,
   id,
   className = "",
   children,
 }: Props) {
   return (
     <section id={id} className={`relative isolate overflow-hidden ${className}`}>
-      <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
-        <Image
-          src={wallpaper.src}
-          alt=""
-          fill
-          priority={priority}
-          sizes="100vw"
-          className="object-cover object-center saturate-[1.12] brightness-[1.08]"
+      <div
+        className="pointer-events-none absolute inset-0 z-0"
+        aria-hidden
+        data-section-backdrop
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat saturate-[1.12] brightness-[1.08]"
+          style={{ backgroundImage: `url("${wallpaper.src}")` }}
         />
         <div className={`absolute inset-0 ${overlayClass[overlay]}`} />
       </div>

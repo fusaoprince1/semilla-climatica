@@ -8,7 +8,6 @@ export default function Hero() {
     <SectionBackdrop
       wallpaper={SECTION_WALLPAPERS.hero}
       overlay="hero"
-      priority
       className="hero-glow min-h-svh"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
