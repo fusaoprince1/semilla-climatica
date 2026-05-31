@@ -11,6 +11,7 @@ export default function DonateForm() {
   const [custom, setCustom] = useState("");
   const [frequency, setFrequency] = useState<Frequency>("once");
   const [name, setName] = useState("");
+  const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -28,7 +29,7 @@ export default function DonateForm() {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount, name, frequency }),
+        body: JSON.stringify({ amount, name, city, frequency }),
       });
 
       const data = await res.json();
@@ -144,6 +145,20 @@ export default function DonateForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="María G."
+          className="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 text-foreground outline-none transition focus:border-accent/50"
+        />
+      </div>
+
+      <div className="mt-4">
+        <label htmlFor="city" className="text-sm text-muted">
+          Tu ciudad (opcional)
+        </label>
+        <input
+          id="city"
+          type="text"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          placeholder="CDMX, Guadalajara, Monterrey..."
           className="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 text-foreground outline-none transition focus:border-accent/50"
         />
       </div>

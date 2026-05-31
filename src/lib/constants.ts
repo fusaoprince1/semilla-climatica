@@ -92,19 +92,6 @@ export const PLAN_PHASES = [
 ];
 
 export const FUND_GOAL = {
-  current: 115000,
   target: 500000,
   phase: 1,
 };
-
-// Donantes de ejemplo para el muro digital (reemplazar con datos reales)
-export const WALL_DONORS = [
-  { name: "María G.", amount: 20, date: "2026-05-20", city: "CDMX" },
-  { name: "Carlos R.", amount: 500, date: "2026-05-19", city: "Guadalajara", founder: true },
-  { name: "Ana L.", amount: 50, date: "2026-05-18", city: "Monterrey" },
-  { name: "Roberto M.", amount: 150, date: "2026-05-17", city: "Puebla" },
-  { name: "Lucía V.", amount: 20, date: "2026-05-16", city: "Mérida" },
-  { name: "Diego S.", amount: 500, date: "2026-05-15", city: "CDMX", founder: true },
-  { name: "Patricia H.", amount: 20, date: "2026-05-14", city: "Tijuana" },
-  { name: "Fernando T.", amount: 50, date: "2026-05-13", city: "Querétaro" },
-];

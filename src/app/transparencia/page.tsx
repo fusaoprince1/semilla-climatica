@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { TRANSPARENCY_BREAKDOWN, FUND_GOAL } from "@/lib/constants";
+import { getFundStats } from "@/lib/donors";
+import FundProgress from "@/components/FundProgress";
 
 export const metadata: Metadata = {
   title: "Transparencia",
@@ -9,8 +11,8 @@ export const metadata: Metadata = {
     "Cada peso cuenta y se ve. Conoce exactamente cómo Semilla Climática distribuye las donaciones.",
 };
 
-export default function TransparenciaPage() {
-  const progress = Math.round((FUND_GOAL.current / FUND_GOAL.target) * 100);
+export default async function TransparenciaPage() {
+  const stats = await getFundStats();
 
   return (
     <div className="pt-28 pb-20 sm:pt-36">
@@ -58,25 +60,7 @@ export default function TransparenciaPage() {
           </div>
 
           <div className="space-y-6">
-            <div className="rounded-2xl border border-border bg-surface p-6 sm:p-8">
-              <h2 className="font-display text-xl font-semibold">
-                Estado del fondo
-              </h2>
-              <p className="mt-4 font-display text-3xl font-bold">
-                ${FUND_GOAL.current.toLocaleString("es-MX")}{" "}
-                <span className="text-lg font-normal text-muted">MXN</span>
-              </p>
-              <p className="mt-1 text-sm text-muted">
-                Meta Fase {FUND_GOAL.phase}: $
-                {FUND_GOAL.target.toLocaleString("es-MX")} MXN ({progress}%)
-              </p>
-              <div className="mt-4 h-3 overflow-hidden rounded-full bg-surface-light">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-primary to-accent"
-                  style={{ width: `${progress}%` }}
-                />
-              </div>
-            </div>
+            <FundProgress stats={stats} />
 
             <div className="rounded-2xl border border-border bg-surface p-6 sm:p-8">
               <h2 className="font-display text-xl font-semibold">
@@ -122,7 +106,7 @@ export default function TransparenciaPage() {
           <p className="mt-2 text-muted">
             Publicaremos reportes detallados cada trimestre con ingresos,
             gastos, acciones realizadas y balance del fondo. El primer reporte
-            estará disponible cuando alcancemos $50,000 MXN en donaciones.
+            estará disponible cuando alcancemos ${FUND_GOAL.target.toLocaleString("es-MX")} MXN en donaciones.
           </p>
           <p className="mt-4 text-sm text-muted italic">
             Próximo reporte: Q3 2026 (pendiente)

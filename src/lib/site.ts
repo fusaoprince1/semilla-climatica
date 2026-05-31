@@ -11,11 +11,12 @@ export function getSiteUrl() {
 }
 
 export function parseDonorReference(reference: string | null) {
-  if (!reference) return { name: "Semillero", amount: 0 };
-  const [name, amountStr] = reference.split("|");
+  if (!reference) return { name: "Semillero", amount: 0, city: undefined };
+  const parts = reference.split("|");
   return {
-    name: decodeURIComponent(name || "Semillero"),
-    amount: parseInt(amountStr || "0", 10) || 0,
+    name: decodeURIComponent(parts[0] || "Semillero"),
+    amount: parseInt(parts[1] || "0", 10) || 0,
+    city: parts[2] ? decodeURIComponent(parts[2]) : undefined,
   };
 }
 
