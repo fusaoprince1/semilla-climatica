@@ -1,10 +1,16 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { TRANSPARENCY_BREAKDOWN } from "@/lib/constants";
+import SectionBackdrop from "@/components/SectionBackdrop";
+import { SECTION_WALLPAPERS } from "@/lib/section-images";
 
 export default function TransparencyPreview() {
   return (
-    <section className="py-20 sm:py-28">
+    <SectionBackdrop
+      wallpaper={SECTION_WALLPAPERS.transparency}
+      overlay="soft"
+      className="py-20 sm:py-28"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
@@ -25,7 +31,7 @@ export default function TransparencyPreview() {
             </Link>
           </div>
 
-          <div className="rounded-2xl border border-border bg-surface p-6 sm:p-8">
+          <div className="surface-glass rounded-2xl border border-border/80 p-6 sm:p-8">
             <p className="text-sm font-medium text-muted">
               Por cada $100 MXN donados
             </p>
@@ -36,7 +42,7 @@ export default function TransparencyPreview() {
                     <span>{item.label}</span>
                     <span className="font-semibold">{item.percent}%</span>
                   </div>
-                  <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-light">
+                  <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-light/80">
                     <div
                       className="h-full rounded-full"
                       style={{
@@ -51,6 +57,6 @@ export default function TransparencyPreview() {
           </div>
         </div>
       </div>
-    </section>
+    </SectionBackdrop>
   );
 }

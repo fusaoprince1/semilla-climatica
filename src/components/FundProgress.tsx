@@ -9,7 +9,7 @@ export default function FundProgress({ stats }: Props) {
   const showNumbers = shouldShowPublicStats(stats.current);
 
   return (
-    <div className="rounded-2xl border border-border bg-background p-6 sm:p-8">
+    <div className="card-glass rounded-2xl border border-border/80 p-6 sm:p-8">
       {showNumbers ? (
         <>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">

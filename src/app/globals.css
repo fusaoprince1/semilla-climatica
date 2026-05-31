@@ -60,6 +60,16 @@ body {
   );
 }
 
+.surface-glass {
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.card-glass {
+  background: color-mix(in srgb, var(--background) 90%, transparent);
+  backdrop-filter: blur(10px);
+}
+
 .card-glow:hover {
   box-shadow: 0 0 30px rgba(13, 79, 60, 0.3);
 }

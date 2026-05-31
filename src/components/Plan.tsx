@@ -1,5 +1,7 @@
 import { getFundStats } from "@/lib/donors";
 import FundProgress from "@/components/FundProgress";
+import SectionBackdrop from "@/components/SectionBackdrop";
+import { SECTION_WALLPAPERS } from "@/lib/section-images";
 
 export default async function Plan() {
   const stats = await getFundStats();
@@ -35,7 +37,12 @@ export default async function Plan() {
   ];
 
   return (
-    <section id="plan" className="bg-surface py-20 sm:py-28">
+    <SectionBackdrop
+      id="plan"
+      wallpaper={SECTION_WALLPAPERS.plan}
+      overlay="medium"
+      className="py-20 sm:py-28"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold sm:text-4xl">
@@ -51,7 +58,7 @@ export default async function Plan() {
           {phases.map((phase) => (
             <div
               key={phase.phase}
-              className="card-glow relative rounded-2xl border border-border bg-background p-6 transition"
+              className="card-glow card-glass relative rounded-2xl border border-border/80 p-6 transition"
             >
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/20 text-lg">
@@ -75,6 +82,6 @@ export default async function Plan() {
           <FundProgress stats={stats} />
         </div>
       </div>
-    </section>
+    </SectionBackdrop>
   );
 }

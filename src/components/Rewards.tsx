@@ -1,10 +1,16 @@
 import Link from "next/link";
 import { Award, Crown, Leaf } from "lucide-react";
 import { PUBLIC_PROMISES } from "@/lib/perks";
+import SectionBackdrop from "@/components/SectionBackdrop";
+import { SECTION_WALLPAPERS } from "@/lib/section-images";
 
 export default function Rewards() {
   return (
-    <section className="bg-surface py-20 sm:py-28">
+    <SectionBackdrop
+      wallpaper={SECTION_WALLPAPERS.rewards}
+      overlay="medium"
+      className="py-20 sm:py-28"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold sm:text-4xl">
@@ -17,7 +23,7 @@ export default function Rewards() {
         </div>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="card-glow rounded-2xl border border-border bg-background p-6 text-center transition">
+          <div className="card-glow card-glass rounded-2xl border border-border/80 p-6 text-center transition">
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20 ring-1 ring-primary/40">
               <Leaf className="h-7 w-7 text-primary-light" />
             </div>
@@ -30,7 +36,7 @@ export default function Rewards() {
             </ul>
           </div>
 
-          <div className="card-glow rounded-2xl border border-border bg-background p-6 text-center transition">
+          <div className="card-glow card-glass rounded-2xl border border-border/80 p-6 text-center transition">
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20 ring-1 ring-primary/40">
               <Leaf className="h-7 w-7 text-accent" />
             </div>
@@ -43,7 +49,7 @@ export default function Rewards() {
             </ul>
           </div>
 
-          <div className="card-glow rounded-2xl border border-accent/30 bg-background p-6 text-center ring-1 ring-accent/20 transition">
+          <div className="card-glow card-glass rounded-2xl border border-accent/30 p-6 text-center ring-1 ring-accent/20 transition">
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/20">
               <Award className="h-7 w-7 text-accent" />
             </div>
@@ -57,7 +63,7 @@ export default function Rewards() {
             </ul>
           </div>
 
-          <div className="card-glow-accent group rounded-2xl border border-accent/30 bg-background p-6 text-center ring-1 ring-accent/20 transition">
+          <div className="card-glow-accent group card-glass rounded-2xl border border-accent/30 p-6 text-center ring-1 ring-accent/20 transition">
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/20 ring-1 ring-accent/40 transition group-hover:bg-accent/30 group-hover:shadow-[0_0_20px_rgba(244,160,36,0.45)] group-hover:ring-accent/70">
               <Crown className="h-7 w-7 text-accent transition group-hover:drop-shadow-[0_0_10px_rgba(244,160,36,0.9)]" />
             </div>
@@ -85,6 +91,6 @@ export default function Rewards() {
           </Link>
         </div>
       </div>
-    </section>
+    </SectionBackdrop>
   );
 }

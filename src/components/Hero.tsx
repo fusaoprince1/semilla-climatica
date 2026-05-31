@@ -1,10 +1,17 @@
 import Link from "next/link";
 import { Shield, Target, FileText } from "lucide-react";
+import SectionBackdrop from "@/components/SectionBackdrop";
+import { SECTION_WALLPAPERS } from "@/lib/section-images";
 
 export default function Hero() {
   return (
-    <section className="hero-glow relative min-h-svh overflow-hidden">
-      <div className="absolute inset-0 -z-10">
+    <SectionBackdrop
+      wallpaper={SECTION_WALLPAPERS.hero}
+      overlay="hero"
+      priority
+      className="hero-glow min-h-svh"
+    >
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 h-96 w-96 rounded-full bg-primary/10 blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-accent/5 blur-3xl animate-pulse-glow" />
       </div>
@@ -38,7 +45,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/transparencia"
-              className="flex w-full items-center justify-center rounded-full border border-border px-8 py-4 text-base font-medium text-foreground transition hover:border-primary/50 hover:bg-surface sm:w-auto"
+              className="flex w-full items-center justify-center rounded-full border border-border bg-background/40 px-8 py-4 text-base font-medium text-foreground backdrop-blur-sm transition hover:border-primary/50 hover:bg-surface/60 sm:w-auto"
             >
               Ver cómo usamos tu dinero
             </Link>
@@ -60,6 +67,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </SectionBackdrop>
   );
 }

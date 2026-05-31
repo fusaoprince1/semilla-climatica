@@ -2,14 +2,20 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getDonors } from "@/lib/donors";
 import { buildCarouselSlots } from "@/lib/display-donors";
+import { SECTION_WALLPAPERS } from "@/lib/section-images";
 import DonorSlotGrid from "@/components/DonorSlotGrid";
+import SectionBackdrop from "@/components/SectionBackdrop";
 
 export default async function LiveDonors() {
   const donors = await getDonors();
   const slots = buildCarouselSlots(donors);
 
   return (
-    <section className="border-y border-border bg-surface py-16 sm:py-20">
+    <SectionBackdrop
+      wallpaper={SECTION_WALLPAPERS.liveDonors}
+      overlay="medium"
+      className="border-y border-border/60 py-16 sm:py-20"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
@@ -30,6 +36,6 @@ export default async function LiveDonors() {
         </div>
         <DonorSlotGrid slots={slots} horizontal />
       </div>
-    </section>
+    </SectionBackdrop>
   );
 }

@@ -1,8 +1,15 @@
 import { PROBLEM_STATS } from "@/lib/constants";
+import SectionBackdrop from "@/components/SectionBackdrop";
+import { SECTION_WALLPAPERS } from "@/lib/section-images";
 
 export default function Problem() {
   return (
-    <section id="problema" className="py-20 sm:py-28">
+    <SectionBackdrop
+      id="problema"
+      wallpaper={SECTION_WALLPAPERS.problem}
+      overlay="heavy"
+      className="py-20 sm:py-28"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold sm:text-4xl">
@@ -18,7 +25,7 @@ export default function Problem() {
           {PROBLEM_STATS.map((stat) => (
             <div
               key={stat.label}
-              className="card-glow rounded-2xl border border-border bg-surface p-6 transition"
+              className="card-glow surface-glass rounded-2xl border border-border/80 p-6 transition"
             >
               <p className="font-display text-4xl font-bold text-danger">
                 {stat.value}
@@ -32,6 +39,6 @@ export default function Problem() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionBackdrop>
   );
 }
