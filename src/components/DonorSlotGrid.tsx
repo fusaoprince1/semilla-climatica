@@ -3,6 +3,7 @@ import { Crown, Leaf, Share2 } from "lucide-react";
 import type { Donor } from "@/lib/donors";
 import PlaceholderDonorCard from "@/components/PlaceholderDonorCard";
 import type { DisplaySlot } from "@/lib/display-donors";
+import { formatDonorDate } from "@/lib/dates";
 
 function RealDonorCard({
   donor,
@@ -42,11 +43,7 @@ function RealDonorCard({
       </p>
       <p className="mt-2 text-xs text-muted">
         {donor.city ? `${donor.city} · ` : ""}
-        {new Date(donor.date).toLocaleDateString("es-MX", {
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-        })}
+        {formatDonorDate(donor.date)}
       </p>
       <p className="mt-3 flex items-center gap-1 text-xs text-primary-light">
         <Share2 className="h-3 w-3" />
@@ -75,7 +72,9 @@ export default function DonorSlotGrid({ slots, horizontal }: Props) {
           )}
         </div>
         <p className="text-center text-xs text-muted">
-          Desliza para ver más →
+          {slots.some((s) => s !== "placeholder")
+            ? "Los 8 donantes más recientes · Desliza →"
+            : "Desliza para ver más →"}
         </p>
       </div>
     );

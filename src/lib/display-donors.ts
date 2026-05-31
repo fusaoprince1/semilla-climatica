@@ -1,4 +1,5 @@
 import type { Donor } from "./donors";
+import { getDonorDateKey } from "./dates";
 import { CAROUSEL_SLOTS, MURO_VISIBLE_SLOTS } from "./stats-policy";
 
 export type DisplaySlot = Donor | "placeholder";
@@ -9,7 +10,11 @@ export function sortDonorsNewestFirst(donors: Donor[]): Donor[] {
   );
 }
 
-/** Reales primero (izquierda), placeholders rellenan hasta 8 */
+/**
+ * Carrusel: siempre 8 espacios.
+ * - Si hay 8+ reales → los 8 más recientes (el 9.º ya no aparece aquí, sí en muro).
+ * - Si hay menos de 8 → reales + placeholders al final.
+ */
 export function buildCarouselSlots(donors: Donor[]): DisplaySlot[] {
   const sorted = sortDonorsNewestFirst(donors);
   const slots: DisplaySlot[] = sorted.slice(0, CAROUSEL_SLOTS);
@@ -17,7 +22,11 @@ export function buildCarouselSlots(donors: Donor[]): DisplaySlot[] {
   return slots;
 }
 
-/** Grid de hasta 40: reales + placeholders al final */
+/**
+ * Muro navegable: hasta 40 más recientes.
+ * - Si hay 40+ reales → solo los 40 más recientes (el 41.º solo por búsqueda).
+ * - Si hay menos → reales + placeholders.
+ */
 export function buildMuroBrowseSlots(donors: Donor[]): DisplaySlot[] {
   const sorted = sortDonorsNewestFirst(donors);
   const slots: DisplaySlot[] = sorted.slice(0, MURO_VISIBLE_SLOTS);
@@ -25,6 +34,7 @@ export function buildMuroBrowseSlots(donors: Donor[]): DisplaySlot[] {
   return slots;
 }
 
+/** Búsqueda en TODA la base (sin límite de 40) */
 export function filterDonors(
   donors: Donor[],
   query: string,
@@ -42,15 +52,10 @@ export function filterDonors(
   }
 
   if (dateFilter) {
-    result = result.filter((d) => {
-      const donorDate = new Date(d.date).toISOString().slice(0, 10);
-      return donorDate === dateFilter;
-    });
+    result = result.filter(
+      (d) => getDonorDateKey(d.date) === dateFilter
+    );
   }
 
-  return result.slice(0, MURO_VISIBLE_SLOTS);
-}
-
-export function isSameDay(isoDate: string, yyyyMmDd: string): boolean {
-  return new Date(isoDate).toISOString().slice(0, 10) === yyyyMmDd;
+  return result;
 }
