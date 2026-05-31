@@ -2,14 +2,25 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getDonors } from "@/lib/donors";
 import { buildCarouselSlots } from "@/lib/display-donors";
+import { SECTION_IMAGES } from "@/lib/section-images";
 import DonorSlotGrid from "@/components/DonorSlotGrid";
+import SectionImage from "@/components/SectionImage";
 
 export default async function LiveDonors() {
   const donors = await getDonors();
   const slots = buildCarouselSlots(donors);
 
   return (
-    <section className="border-y border-border bg-surface py-16 sm:py-20">
+    <section className="relative border-y border-border py-16 sm:py-20">
+      <SectionImage
+        src={SECTION_IMAGES.liveDonors.src}
+        alt={SECTION_IMAGES.liveDonors.alt}
+        overlay="dark-heavy"
+        sizes="100vw"
+        className="absolute inset-0 -z-10"
+        imageClassName="object-cover object-center"
+      />
+
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
