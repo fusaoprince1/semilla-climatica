@@ -156,10 +156,10 @@ export default function DonationBadge({
         )}
       </div>
 
-      {tier === "fundador" && (
+        {tier === "fundador" && (
         <p className="mt-4 text-xs text-muted print:hidden">
-          Como miembro fundador tendrás prioridad para el mural conmemorativo en
-          CDMX cuando alcancemos la Fase 3.
+          Prioridad para mural conmemorativo en CDMX — meta Fase 3, sujeto a
+          permisos oficiales.
         </p>
       )}
 

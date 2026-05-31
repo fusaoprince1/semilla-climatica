@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Shield, Target, FileText } from "lucide-react";
+import { Shield, Target, FileText } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -26,8 +26,7 @@ export default function Hero() {
           </p>
 
           <p className="mt-2 text-sm text-muted">
-            Menos que un antojo. Tu nombre queda en el Muro Digital para
-            siempre.
+            Badge verificado + tu nombre en el Muro Digital al instante.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -36,7 +35,6 @@ export default function Hero() {
               className="group flex w-full items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-base font-semibold text-background transition hover:bg-accent-hover sm:w-auto"
             >
               Donar ahora — desde $20 MXN
-              <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
             </Link>
             <Link
               href="/transparencia"
@@ -49,7 +47,7 @@ export default function Hero() {
           <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted">
             <span className="flex items-center gap-2">
               <Shield className="h-4 w-4 text-primary-light" />
-              100% transparente
+              Pagos seguros Mercado Pago
             </span>
             <span className="flex items-center gap-2">
               <Target className="h-4 w-4 text-primary-light" />
@@ -57,7 +55,7 @@ export default function Hero() {
             </span>
             <span className="flex items-center gap-2">
               <FileText className="h-4 w-4 text-primary-light" />
-              Reportes trimestrales
+              Reportes al alcanzar metas
             </span>
           </div>
         </div>

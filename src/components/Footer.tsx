@@ -50,8 +50,16 @@ export default function Footer() {
               Legal
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-muted">
-              <li>Aviso de privacidad (próximamente)</li>
-              <li>Términos de donación (próximamente)</li>
+              <li>
+                <Link href="/privacidad" className="transition hover:text-accent">
+                  Aviso de privacidad
+                </Link>
+              </li>
+              <li>
+                <Link href="/terminos" className="transition hover:text-accent">
+                  Términos de donación
+                </Link>
+              </li>
               <li>contacto@semillaclimatica.com</li>
             </ul>
           </div>

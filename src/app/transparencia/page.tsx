@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { TRANSPARENCY_BREAKDOWN, FUND_GOAL } from "@/lib/constants";
+import { PUBLIC_PROMISES } from "@/lib/perks";
+import { TRANSPARENCY_BREAKDOWN } from "@/lib/constants";
 import { getFundStats } from "@/lib/donors";
 import FundProgress from "@/components/FundProgress";
 
@@ -105,11 +106,11 @@ export default async function TransparenciaPage() {
           </h2>
           <p className="mt-2 text-muted">
             Publicaremos reportes detallados cada trimestre con ingresos,
-            gastos, acciones realizadas y balance del fondo. El primer reporte
-            estará disponible cuando alcancemos ${FUND_GOAL.target.toLocaleString("es-MX")} MXN en donaciones.
+            gastos, acciones realizadas y balance del fondo.{" "}
+            {PUBLIC_PROMISES.reportsNote}
           </p>
           <p className="mt-4 text-sm text-muted italic">
-            Próximo reporte: Q3 2026 (pendiente)
+            Próximo reporte: pendiente de meta inicial
           </p>
         </div>
 

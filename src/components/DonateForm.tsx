@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Check, Loader2 } from "lucide-react";
 import { DONATION_TIERS } from "@/lib/constants";
+import { getTierInfo } from "@/lib/perks";
 
 type Frequency = "once" | "monthly";
 
@@ -16,7 +17,10 @@ export default function DonateForm() {
   const [error, setError] = useState("");
 
   const amount = custom ? parseInt(custom, 10) || 0 : selected;
-  const tier = DONATION_TIERS.find((t) => t.amount === selected);
+  const tierInfo = useMemo(
+    () => (amount >= 20 ? getTierInfo(amount) : null),
+    [amount]
+  );
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -119,11 +123,14 @@ export default function DonateForm() {
         </div>
       </div>
 
-      {tier && !custom && (
+      {tierInfo && (
         <div className="mt-6 rounded-xl border border-border bg-surface p-4">
-          <p className="text-sm font-medium">{tier.description}</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-accent">
+            Recibes — {tierInfo.label}
+          </p>
+          <p className="mt-2 text-sm font-medium">{tierInfo.description}</p>
           <ul className="mt-3 space-y-2">
-            {tier.perks.map((perk) => (
+            {tierInfo.perks.map((perk) => (
               <li key={perk} className="flex items-center gap-2 text-sm text-muted">
                 <Check className="h-4 w-4 shrink-0 text-accent" />
                 {perk}
@@ -188,7 +195,7 @@ export default function DonateForm() {
       </button>
 
       <p className="mt-4 text-center text-xs text-muted">
-        Pagos seguros vía Mercado Pago · Tarjeta, OXXO, SPEI y más
+        Pagos seguros vía Mercado Pago · Badge y Muro al confirmarse el pago
       </p>
     </form>
   );
