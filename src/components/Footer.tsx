@@ -66,22 +66,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-border pt-6 text-center text-xs text-muted">
-          <p>
-            © {new Date().getFullYear()} {SITE.name}. Todos los derechos
-            reservados.
-          </p>
-          <p className="mt-2">
-            Fotografías vía{" "}
-            <a
-              href="https://unsplash.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-accent"
-            >
-              Unsplash
-            </a>
-            .
-          </p>
+          © {new Date().getFullYear()} {SITE.name}. Todos los derechos reservados.
         </div>
       </div>
     </footer>

@@ -9,13 +9,9 @@
   --accent-hover: #ffb74d;
   --surface: #111916;
   --surface-light: #1a2420;
-  --surface-bright: #eef3ef;
-  --foreground-dark: #0f1a15;
   --muted: #8ba898;
-  --muted-dark: #4a6356;
   --danger: #e53935;
   --border: #1e2e28;
-  --border-light: #c8d9ce;
 }
 
 @theme inline {
@@ -30,17 +26,8 @@
   --color-muted: var(--muted);
   --color-danger: var(--danger);
   --color-border: var(--border);
-  --color-surface-bright: var(--surface-bright);
-  --color-foreground-dark: var(--foreground-dark);
-  --color-muted-dark: var(--muted-dark);
-  --color-border-light: var(--border-light);
   --font-sans: var(--font-inter);
   --font-display: var(--font-outfit);
-}
-
-.section-light {
-  background: linear-gradient(180deg, var(--surface-bright) 0%, #e4ebe6 100%);
-  color: var(--foreground-dark);
 }
 
 html {
