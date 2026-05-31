@@ -2,18 +2,19 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { Search, Calendar, Leaf } from "lucide-react";
+import { Search, Calendar } from "lucide-react";
 import type { Donor } from "@/lib/donors";
 import { buildMuroBrowseSlots, filterDonors } from "@/lib/display-donors";
 import { MURO_VISIBLE_SLOTS } from "@/lib/stats-policy";
 import DonorSlotGrid from "@/components/DonorSlotGrid";
+import type { DisplaySlot } from "@/lib/display-donors";
 
 export default function MuroWithSearch({ donors }: { donors: Donor[] }) {
   const [query, setQuery] = useState("");
   const [dateFilter, setDateFilter] = useState("");
   const isSearching = query.trim().length > 0 || dateFilter.length > 0;
 
-  const visibleDonors: Donor[] = useMemo(() => {
+  const slots: DisplaySlot[] = useMemo(() => {
     if (isSearching) {
       return filterDonors(donors, query, dateFilter);
     }
@@ -24,9 +25,8 @@ export default function MuroWithSearch({ donors }: { donors: Donor[] }) {
     <>
       <div className="mt-8 rounded-xl border border-border bg-surface p-4 sm:p-5">
         <p className="text-sm text-muted leading-relaxed">
-          Siempre los {MURO_VISIBLE_SLOTS} donantes más recientes. Si no ves tu
-          nombre, búscalo por{" "}
-          <span className="text-foreground">nombre</span> o{" "}
+          Hasta {MURO_VISIBLE_SLOTS} donaciones recientes. Si no ves tu nombre,
+          búscalo por <span className="text-foreground">nombre</span> o{" "}
           <span className="text-foreground">fecha</span> — aunque ya no esté en
           esta lista.
         </p>
@@ -67,7 +67,7 @@ export default function MuroWithSearch({ donors }: { donors: Donor[] }) {
         )}
       </div>
 
-      {isSearching && visibleDonors.length === 0 ? (
+      {isSearching && slots.length === 0 ? (
         <p className="mt-8 text-center text-muted">
           No encontramos coincidencias. Verifica nombre y fecha, o{" "}
           <Link href="/donar" className="text-accent">
@@ -75,19 +75,6 @@ export default function MuroWithSearch({ donors }: { donors: Donor[] }) {
           </Link>
           .
         </p>
-      ) : !isSearching && visibleDonors.length === 0 ? (
-        <div className="mt-12 rounded-2xl border border-dashed border-border bg-surface p-10 text-center">
-          <Leaf className="mx-auto h-10 w-10 text-primary-light" />
-          <p className="mt-4 font-display text-lg font-semibold">
-            Aún no hay donantes en el muro
-          </p>
-          <Link
-            href="/donar"
-            className="mt-6 inline-flex rounded-full bg-accent px-8 py-3 font-semibold text-background"
-          >
-            Sé el primero
-          </Link>
-        </div>
       ) : (
         <div
           className={
@@ -96,14 +83,19 @@ export default function MuroWithSearch({ donors }: { donors: Donor[] }) {
               : "mt-8 max-h-[720px] overflow-y-auto rounded-xl border border-border/50 p-2 pr-3"
           }
         >
-          <DonorSlotGrid slots={visibleDonors} />
-          {!isSearching && visibleDonors.length > 4 && (
+          <DonorSlotGrid slots={slots} />
+          {!isSearching && (
             <p className="pb-2 pt-4 text-center text-xs text-muted">
-              Desplázate para ver los {Math.min(visibleDonors.length, MURO_VISIBLE_SLOTS)}{" "}
-              más recientes ↓
+              Desplázate para ver más ↓
             </p>
           )}
         </div>
+      )}
+
+      {!isSearching && donors.length < MURO_VISIBLE_SLOTS && (
+        <p className="mt-4 text-center text-xs text-muted">
+          Los espacios punteados están disponibles — sé el próximo semillero.
+        </p>
       )}
     </>
   );

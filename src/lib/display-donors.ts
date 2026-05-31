@@ -23,11 +23,16 @@ export function buildCarouselSlots(donors: Donor[]): DisplaySlot[] {
 }
 
 /**
- * Muro: siempre los 40 donantes más recientes (solo reales, sin placeholders).
- * El 41.º más antiguo solo aparece por búsqueda.
+ * Muro: siempre 40 espacios.
+ * - Reales más recientes primero (izq → der, arriba → abajo).
+ * - Placeholders rellenan hasta 40; se van sustituyendo conforme llegan reales.
+ * - Con 40+ reales → solo los 40 más recientes (el 41.º solo por búsqueda).
  */
-export function buildMuroBrowseSlots(donors: Donor[]): Donor[] {
-  return sortDonorsNewestFirst(donors).slice(0, MURO_VISIBLE_SLOTS);
+export function buildMuroBrowseSlots(donors: Donor[]): DisplaySlot[] {
+  const sorted = sortDonorsNewestFirst(donors);
+  const slots: DisplaySlot[] = sorted.slice(0, MURO_VISIBLE_SLOTS);
+  while (slots.length < MURO_VISIBLE_SLOTS) slots.push("placeholder");
+  return slots;
 }
 
 /** Búsqueda en TODA la base (sin límite de 40) */
