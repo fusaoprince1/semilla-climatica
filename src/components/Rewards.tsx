@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Share2, Award, Crown, Leaf } from "lucide-react";
+import { Award, Crown, Leaf } from "lucide-react";
 import { PUBLIC_PROMISES } from "@/lib/perks";
 
 export default function Rewards() {
@@ -18,8 +18,8 @@ export default function Rewards() {
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <div className="card-glow rounded-2xl border border-border bg-background p-6 text-center transition">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20">
-              <Share2 className="h-7 w-7 text-accent" />
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20 ring-1 ring-primary/40">
+              <Leaf className="h-7 w-7 text-primary-light" />
             </div>
             <h3 className="mt-4 font-display text-lg font-semibold">
               Desde $20 MXN
@@ -31,8 +31,8 @@ export default function Rewards() {
           </div>
 
           <div className="card-glow rounded-2xl border border-border bg-background p-6 text-center transition">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20">
-              <Leaf className="h-7 w-7 text-primary-light" />
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20 ring-1 ring-primary/40">
+              <Leaf className="h-7 w-7 text-accent" />
             </div>
             <h3 className="mt-4 font-display text-lg font-semibold">
               $20 – $149 MXN
