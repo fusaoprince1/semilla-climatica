@@ -26,8 +26,7 @@ export default async function MuroPage() {
         </div>
 
         <div className="mt-6 rounded-xl border border-accent/20 bg-accent/5 p-4 text-center text-sm text-muted">
-          Tu nombre no es un premio — es prueba de que estuviste antes que los
-          demás.
+          Toca un nombre para ver, imprimir o compartir su badge verificado.
         </div>
 
         <MuroWithSearch donors={donors} />

@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getDonors } from "@/lib/donors";
-import DonorGrid from "@/components/DonorGrid";
+import { buildCarouselSlots } from "@/lib/display-donors";
+import DonorSlotGrid from "@/components/DonorSlotGrid";
 
 export default async function LiveDonors() {
   const donors = await getDonors();
-  const latest = donors.slice(0, 4);
-
-  if (latest.length === 0) return null;
+  const slots = buildCarouselSlots(donors);
 
   return (
     <section className="border-y border-border bg-surface py-16 sm:py-20">
@@ -18,7 +17,7 @@ export default async function LiveDonors() {
               Ya sembraron
             </h2>
             <p className="mt-2 text-muted">
-              Toca un nombre para ver y compartir su badge.
+              Toca un nombre para ver su badge · Desliza para explorar
             </p>
           </div>
           <Link
@@ -29,7 +28,7 @@ export default async function LiveDonors() {
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-        <DonorGrid donors={latest} />
+        <DonorSlotGrid slots={slots} horizontal />
       </div>
     </section>
   );

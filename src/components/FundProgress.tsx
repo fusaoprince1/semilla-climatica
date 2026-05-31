@@ -3,16 +3,10 @@ import { shouldShowPublicStats } from "@/lib/stats-policy";
 
 type Props = {
   stats: FundStats;
-  compact?: boolean;
 };
 
-export default function FundProgress({ stats, compact }: Props) {
-  const showNumbers = shouldShowPublicStats(stats);
-  const progress = showNumbers
-    ? Math.min(100, Math.round((stats.current / stats.target) * 100) || 0)
-    : 0;
-
-  if (compact) return null;
+export default function FundProgress({ stats }: Props) {
+  const showNumbers = shouldShowPublicStats(stats.current);
 
   return (
     <div className="rounded-2xl border border-border bg-background p-6 sm:p-8">
@@ -32,28 +26,34 @@ export default function FundProgress({ stats, compact }: Props) {
               </p>
             </div>
             <p className="font-display text-3xl font-bold text-accent">
-              {progress}%
+              {Math.min(
+                100,
+                Math.round((stats.current / stats.target) * 100) || 0
+              )}
+              %
             </p>
           </div>
           <div className="mt-4 h-3 overflow-hidden rounded-full bg-surface-light">
             <div
               className="h-full rounded-full bg-gradient-to-r from-primary to-accent transition-all duration-1000"
               style={{
-                width: `${Math.max(progress, stats.current > 0 ? 2 : 0)}%`,
+                width: `${Math.min(100, Math.max((stats.current / stats.target) * 100, stats.current > 0 ? 2 : 0))}%`,
               }}
             />
           </div>
         </>
       ) : (
         <>
-          <p className="text-sm font-medium text-accent">Fase {stats.phase} en marcha</p>
+          <p className="text-sm font-medium text-accent">
+            Fase {stats.phase} en marcha
+          </p>
           <p className="mt-2 font-display text-xl font-bold sm:text-2xl">
             Sé de los primeros semilleros
           </p>
           <p className="mt-2 text-sm text-muted leading-relaxed">
             Estamos en las primeras etapas del fondo. Las cifras totales se
-            publicarán cuando el movimiento alcance masa crítica — tu donación
-            cuenta desde el día uno.
+            publicarán al alcanzar $50,000 MXN — tu donación cuenta desde el
+            día uno.
           </p>
           <div className="mt-4 h-3 overflow-hidden rounded-full bg-surface-light">
             <div className="h-full w-1/4 animate-pulse rounded-full bg-gradient-to-r from-primary/60 to-accent/60" />
