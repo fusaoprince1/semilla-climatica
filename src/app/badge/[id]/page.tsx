@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DonationBadge from "@/components/DonationBadge";
+import MetaTrackEvent from "@/components/MetaTrackEvent";
 import { getDonorById } from "@/lib/donors";
 
 type Props = {
@@ -28,6 +29,16 @@ export default async function BadgePage({ params, searchParams }: Props) {
 
   return (
     <div className="pt-28 pb-20 sm:pt-36">
+      {welcome === "1" && (
+        <MetaTrackEvent
+          event="Purchase"
+          params={{
+            value: donor.amount,
+            currency: "MXN",
+            content_name: "Donacion Semilla Climatica",
+          }}
+        />
+      )}
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <DonationBadge
           name={donor.name}

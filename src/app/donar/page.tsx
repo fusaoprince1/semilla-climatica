@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DonateForm from "@/components/DonateForm";
+import MetaTrackEvent from "@/components/MetaTrackEvent";
 
 export const metadata: Metadata = {
   title: "Donar",
@@ -43,6 +44,13 @@ export default function DonarPage() {
         </div>
 
         <div className="mt-12">
+          <MetaTrackEvent
+            event="ViewContent"
+            params={{
+              content_name: "Donar",
+              content_category: "donation",
+            }}
+          />
           <DonateForm />
         </div>
       </div>

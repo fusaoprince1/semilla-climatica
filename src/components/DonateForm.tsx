@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Check, Loader2 } from "lucide-react";
 import { DONATION_TIERS } from "@/lib/constants";
 import { getTierInfo } from "@/lib/perks";
+import { trackMetaEvent } from "@/lib/meta-pixel";
 
 type Frequency = "once" | "monthly";
 
@@ -43,6 +44,12 @@ export default function DonateForm() {
         setLoading(false);
         return;
       }
+
+      trackMetaEvent("InitiateCheckout", {
+        value: amount,
+        currency: "MXN",
+        content_name: "Donacion Semilla Climatica",
+      });
 
       window.location.href = data.initPoint;
     } catch {

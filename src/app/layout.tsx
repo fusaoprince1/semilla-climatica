@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MetaPixel from "@/components/MetaPixel";
 import { SITE } from "@/lib/constants";
 import "./globals.css";
 
@@ -48,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${outfit.variable} h-full`}>
       <body className="min-h-full flex flex-col antialiased">
+        <MetaPixel />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
