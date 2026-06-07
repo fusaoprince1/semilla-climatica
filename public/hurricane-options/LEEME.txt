@@ -1,8 +1,9 @@
 10 imágenes de candidatos para la sección "No es solo calor".
 
 Cómo verlas:
-1. Local: npm run dev → http://localhost:3000/hurricane-options/
-2. Producción (tras push): https://semillaclimatica.com/hurricane-options/
+1. En el explorador de archivos: c:\Proyectos\misitio\public\hurricane-options\
+2. En el navegador local: npm run dev → http://localhost:3000/hurricane-options
+3. En producción: https://semillaclimatica.com/hurricane-options
 
 Dime el número (01-10) o el nombre del archivo para ponerlo de fondo.
 
