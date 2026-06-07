@@ -33,4 +33,8 @@ export const SECTION_WALLPAPERS = {
     src: unsplash("photo-1542601906990-985af0ad0c0d"),
     alt: "Bosque en regeneración",
   },
+  donate: {
+    src: unsplash("photo-1518531933031-229bbbd7573a"),
+    alt: "Plántula verde brotando en la tierra",
+  },
 } as const satisfies Record<string, SectionWallpaper>;
