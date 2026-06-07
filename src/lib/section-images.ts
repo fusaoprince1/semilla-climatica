@@ -14,27 +14,27 @@ export const SECTION_WALLPAPERS = {
     alt: "Paisaje montañoso en México",
   },
   problem: {
-    src: unsplash("photo-1416879595882-3373a048ccbb"),
-    alt: "Suelo seco y agrietado por sequía",
+    src: unsplash("photo-1500595046743-cd271d694d30"),
+    alt: "Paisaje árido bajo cielo despejado",
   },
   plan: {
     src: unsplash("photo-1509391366360-2e959784a276"),
     alt: "Campo de paneles solares al amanecer",
   },
   liveDonors: {
-    src: unsplash("photo-1464226184884-fa280b87aa32"),
-    alt: "Manos sosteniendo un árbol joven",
+    src: unsplash("photo-1560493676-04071c5f467b"),
+    alt: "Campo cultivado al atardecer",
   },
   transparency: {
     src: unsplash("photo-1441974231531-c6227db76b6e"),
     alt: "Sendero entre árboles verdes",
   },
   rewards: {
-    src: unsplash("photo-1542601906990-985af0ad0c0d"),
-    alt: "Bosque en regeneración",
+    src: unsplash("photo-1500382017468-9049fed747ef"),
+    alt: "Amanecer sobre campo verde",
   },
   donate: {
-    src: unsplash("photo-1518531933031-229bbbd7573a"),
-    alt: "Plántula verde brotando en la tierra",
+    src: unsplash("photo-1472214103451-9374bd1c798e"),
+    alt: "Colinas verdes al amanecer",
   },
 } as const satisfies Record<string, SectionWallpaper>;
