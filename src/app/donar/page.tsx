@@ -38,11 +38,11 @@ export default function DonarPage() {
           </p>
         </div>
 
-        <div className="mx-auto mt-8 flex max-w-lg flex-wrap justify-center gap-2">
+        <div className="mx-auto mt-8 flex max-w-lg flex-col items-center gap-2">
           {HOOKS.slice(1).map((hook) => (
             <span
               key={hook}
-              className="trust-pill rounded-full px-3 py-1 text-xs text-on-wallpaper-soft"
+              className="trust-pill rounded-full px-3 py-1 text-center text-xs text-on-wallpaper-soft"
             >
               {hook}
             </span>
