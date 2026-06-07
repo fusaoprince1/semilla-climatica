@@ -14,8 +14,8 @@ export const SECTION_WALLPAPERS = {
     alt: "Paisaje montañoso en México",
   },
   problem: {
-    src: unsplash("photo-1500595046743-cd271d694d30"),
-    alt: "Paisaje árido bajo cielo despejado",
+    src: unsplash("photo-1559113386-9a07836a1b72"),
+    alt: "Pastizal árido al atardecer con ganado a lo lejos",
   },
   plan: {
     src: unsplash("photo-1509391366360-2e959784a276"),
