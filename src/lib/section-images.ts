@@ -14,8 +14,8 @@ export const SECTION_WALLPAPERS = {
     alt: "Paisaje montañoso en México",
   },
   extremeWeather: {
-    src: "https://eoimages.gsfc.nasa.gov/images/imagerecords/147000/147164/atlantic_vir_2020236.jpg",
-    alt: "Huracanes vistos desde satélite sobre el Golfo de México",
+    src: "/coast-storm-options/03-cancun-olas-ciudad.jpg",
+    alt: "Mar agitado junto a la costa de Cancún",
   },
   problem: {
     src: unsplash("photo-1559113386-9a07836a1b72"),
