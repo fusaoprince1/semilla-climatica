@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const HOOKS = [
   "¿Cuánto gastaste hoy en snacks? $20 van al clima.",
   "Menos que un Uber. Más impacto que ignorar el problema.",
-  "El clima no espera a que tengas más dinero.",
+  "El clima no espera",
   "Tu nombre en el Muro Digital — para siempre.",
 ];
 
