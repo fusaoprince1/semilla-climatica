@@ -14,8 +14,8 @@ export const SECTION_WALLPAPERS = {
     alt: "Paisaje montañoso en México",
   },
   extremeWeather: {
-    src: unsplash("photo-1457327289196-f38b88d97147"),
-    alt: "Huracán visto desde el espacio sobre México y el Golfo",
+    src: "https://eoimages.gsfc.nasa.gov/images/imagerecords/147000/147164/atlantic_vir_2020236.jpg",
+    alt: "Huracanes vistos desde satélite sobre el Golfo de México",
   },
   problem: {
     src: unsplash("photo-1559113386-9a07836a1b72"),

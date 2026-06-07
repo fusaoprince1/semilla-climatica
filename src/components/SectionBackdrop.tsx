@@ -14,6 +14,7 @@ type Props = {
   wallpaper: SectionWallpaper;
   overlay?: BackdropOverlay;
   brightImage?: boolean;
+  imagePosition?: string;
   id?: string;
   className?: string;
   children: ReactNode;
@@ -23,6 +24,7 @@ export default function SectionBackdrop({
   wallpaper,
   overlay = "medium",
   brightImage = false,
+  imagePosition = "center",
   id,
   className = "",
   children,
@@ -40,7 +42,10 @@ export default function SectionBackdrop({
               ? "saturate-[1.2] brightness-[1.22]"
               : "saturate-[1.12] brightness-[1.08]"
           }`}
-          style={{ backgroundImage: `url("${wallpaper.src}")` }}
+          style={{
+            backgroundImage: `url("${wallpaper.src}")`,
+            backgroundPosition: imagePosition,
+          }}
         />
         <div className={`absolute inset-0 ${overlayClass[overlay]}`} />
       </div>

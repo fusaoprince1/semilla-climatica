@@ -3,9 +3,9 @@ import SectionBackdrop from "@/components/SectionBackdrop";
 import { SECTION_WALLPAPERS } from "@/lib/section-images";
 
 const HOOKS = [
-  "¿Llueve más fuerte que antes? También es el clima.",
-  "Huracanes que explotan en horas, no en días.",
-  "Inundaciones en ciudades que nunca se prepararon.",
+  "¿Llueve más fuerte que antes?",
+  "Huracanes que se intensifican en horas, no en días.",
+  "Inundaciones en ciudades donde no era común que aconteciera.",
 ];
 
 export default function ExtremeWeather() {
@@ -14,6 +14,7 @@ export default function ExtremeWeather() {
       id="extremos"
       wallpaper={SECTION_WALLPAPERS.extremeWeather}
       overlay="medium"
+      imagePosition="55% center"
       className="py-20 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
