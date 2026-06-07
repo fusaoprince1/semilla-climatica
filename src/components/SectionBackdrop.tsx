@@ -13,7 +13,7 @@ const overlayClass: Record<BackdropOverlay, string> = {
 type Props = {
   wallpaper: SectionWallpaper;
   overlay?: BackdropOverlay;
-  brightImage?: boolean;
+  brightImage?: boolean | "subtle";
   imagePosition?: string;
   id?: string;
   className?: string;
@@ -38,9 +38,11 @@ export default function SectionBackdrop({
       >
         <div
           className={`absolute inset-0 bg-cover bg-center bg-no-repeat ${
-            brightImage
+            brightImage === true
               ? "saturate-[1.2] brightness-[1.22]"
-              : "saturate-[1.12] brightness-[1.08]"
+              : brightImage === "subtle"
+                ? "saturate-[1.14] brightness-[1.14]"
+                : "saturate-[1.12] brightness-[1.08]"
           }`}
           style={{
             backgroundImage: `url("${wallpaper.src}")`,

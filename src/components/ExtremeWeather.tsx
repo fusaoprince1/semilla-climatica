@@ -13,7 +13,8 @@ export default function ExtremeWeather() {
     <SectionBackdrop
       id="extremos"
       wallpaper={SECTION_WALLPAPERS.extremeWeather}
-      overlay="medium"
+      overlay="soft"
+      brightImage="subtle"
       imagePosition="center"
       className="py-20 sm:py-28"
     >
