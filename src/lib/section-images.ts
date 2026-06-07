@@ -14,7 +14,7 @@ export const SECTION_WALLPAPERS = {
     alt: "Paisaje montañoso en México",
   },
   extremeWeather: {
-    src: "/coast-storm-options/07-costa-viento-palmeras.jpg",
+    src: "/images/extreme-weather-coast.jpg",
     alt: "Costa tropical con viento, palmeras y mar en movimiento",
   },
   problem: {
