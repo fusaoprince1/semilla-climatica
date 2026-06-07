@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
+import ExtremeWeather from "@/components/ExtremeWeather";
 import Plan from "@/components/Plan";
 import TransparencyPreview from "@/components/TransparencyPreview";
 import Rewards from "@/components/Rewards";
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <Problem />
+      <ExtremeWeather />
       <Plan />
       <LiveDonors />
       <TransparencyPreview />

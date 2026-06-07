@@ -49,6 +49,30 @@ export const TRANSPARENCY_BREAKDOWN = [
   { label: "Reserva de emergencia", percent: 10, color: "#5C6BC0" },
 ];
 
+export const EXTREME_WEATHER_STATS = [
+  {
+    value: "Cat. 5",
+    label: "Huracán Otis, Acapulco",
+    detail:
+      "En 2023 pasó de tormenta tropical a categoría 5 en pocas horas. Uno de los eventos más violentos en la costa del Pacífico.",
+    source: "SMN / NOAA",
+  },
+  {
+    value: "Más",
+    label: "Lluvias torrenciales",
+    detail:
+      "Una atmósfera más caliente retiene más humedad: cuando llueve, llueve con fuerza. Inundaciones en horas, no en días.",
+    source: "IPCC / CONAGUA",
+  },
+  {
+    value: "2 caras",
+    label: "Mismo cambio climático",
+    detail:
+      "Sequía en una región e inundaciones en otra. No se contradicen: son el mismo patrón de clima fuera de control.",
+    source: "INECC",
+  },
+];
+
 export const PROBLEM_STATS = [
   {
     value: "+2°C",

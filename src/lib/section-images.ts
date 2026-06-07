@@ -13,6 +13,10 @@ export const SECTION_WALLPAPERS = {
     src: unsplash("photo-1559827260-dc66d52bef19"),
     alt: "Paisaje montañoso en México",
   },
+  extremeWeather: {
+    src: unsplash("photo-1519699047748-de8e457a634e"),
+    alt: "Nubes de tormenta sobre el océano",
+  },
   problem: {
     src: unsplash("photo-1559113386-9a07836a1b72"),
     alt: "Pastizal soleado al atardecer con ganado a lo lejos en Texas",
