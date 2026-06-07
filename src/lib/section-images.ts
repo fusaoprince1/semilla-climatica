@@ -14,8 +14,8 @@ export const SECTION_WALLPAPERS = {
     alt: "Paisaje montañoso en México",
   },
   extremeWeather: {
-    src: "/coast-storm-options/03-cancun-olas-ciudad.jpg",
-    alt: "Mar agitado junto a la costa de Cancún",
+    src: "/coast-storm-options/07-costa-viento-palmeras.jpg",
+    alt: "Costa tropical con viento, palmeras y mar en movimiento",
   },
   problem: {
     src: unsplash("photo-1559113386-9a07836a1b72"),
