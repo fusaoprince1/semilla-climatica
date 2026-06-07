@@ -14,8 +14,8 @@ export const SECTION_WALLPAPERS = {
     alt: "Paisaje montañoso en México",
   },
   extremeWeather: {
-    src: unsplash("photo-1519699047748-de8e457a634e"),
-    alt: "Nubes de tormenta sobre el océano",
+    src: unsplash("photo-1457327289196-f38b88d97147"),
+    alt: "Huracán visto desde el espacio sobre México y el Golfo",
   },
   problem: {
     src: unsplash("photo-1559113386-9a07836a1b72"),

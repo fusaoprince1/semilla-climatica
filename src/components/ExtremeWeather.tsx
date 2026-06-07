@@ -23,8 +23,7 @@ export default function ExtremeWeather() {
           </h2>
           <p className="text-on-wallpaper mx-auto mt-4 max-w-xl text-lg font-medium leading-relaxed sm:text-xl">
             El cambio climático también trae lluvias torrenciales, inundaciones
-            y huracanes cada vez más intensos. Si hoy te inunda la calle, el
-            problema es el mismo — solo cambia de cara.
+            y huracanes cada vez más intensos.
           </p>
         </div>
 
@@ -56,12 +55,6 @@ export default function ExtremeWeather() {
             </div>
           ))}
         </div>
-
-        <p className="text-on-wallpaper-soft mx-auto mt-12 max-w-2xl text-center text-sm leading-relaxed sm:text-base">
-          Da igual si vives con olas de calor o con temporales: la misma
-          urgencia climática está detrás. Por eso Semilla Climática actúa ahora —
-          no cuando ya sea tarde para todos.
-        </p>
       </div>
     </SectionBackdrop>
   );
