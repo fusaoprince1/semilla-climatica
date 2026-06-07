@@ -7,15 +7,15 @@ export default function Problem() {
     <SectionBackdrop
       id="problema"
       wallpaper={SECTION_WALLPAPERS.problem}
-      overlay="medium"
+      overlay="heavy"
       className="py-20 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">
+          <h2 className="text-on-wallpaper font-display text-3xl font-bold sm:text-4xl">
             El clima no espera
           </h2>
-          <p className="mt-4 text-muted leading-relaxed">
+          <p className="text-on-wallpaper mx-auto mt-4 max-w-xl text-lg font-medium leading-relaxed sm:text-xl">
             No podemos cambiar todos los factores geopolíticos, pero el
             calentamiento global es la batalla que no podemos posponer.
           </p>
