@@ -19,10 +19,10 @@ export default async function LiveDonors() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
-            <h2 className="font-display text-2xl font-bold sm:text-3xl">
+            <h2 className="text-on-wallpaper font-display text-2xl font-bold sm:text-3xl">
               Ya sembraron
             </h2>
-            <p className="mt-2 text-muted">
+            <p className="text-on-wallpaper-soft mt-2 text-sm font-medium sm:text-base">
               Toca un nombre para ver su badge · Desliza para explorar
             </p>
           </div>
