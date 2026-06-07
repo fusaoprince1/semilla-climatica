@@ -7,7 +7,8 @@ export default function Problem() {
     <SectionBackdrop
       id="problema"
       wallpaper={SECTION_WALLPAPERS.problem}
-      overlay="heavy"
+      overlay="medium"
+      brightImage
       className="py-20 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
