@@ -167,8 +167,8 @@ export default function ClimateThermometer() {
                   className="pointer-events-none absolute right-0 left-0 flex items-center"
                   style={{ bottom: `calc(${tempToPercent(CURRENT_GLOBAL_TEMP)}% + 64px)` }}
                 >
-                  <div className="h-0.5 flex-1 bg-accent/60" />
-                  <span className="ml-2 whitespace-nowrap rounded bg-accent/20 px-1.5 py-0.5 text-[10px] font-bold text-accent">
+                  <div className="h-0.5 flex-1 bg-white/80" />
+                  <span className="ml-2 whitespace-nowrap rounded border border-white/30 bg-white/15 px-1.5 py-0.5 text-[10px] font-bold text-white shadow-sm">
                     HOY
                   </span>
                 </div>
