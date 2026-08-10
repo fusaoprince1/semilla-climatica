@@ -41,7 +41,7 @@ export default function DonationBadge({
 
   function shareWhatsApp() {
     const text = encodeURIComponent(
-      `Acabo de donar $${amount} MXN a Semilla Climática 🌱 ¿Cuánto gastaste hoy en snacks? ${badgeUrl}`
+      `Acabo de donar $${amount} MXN a Semilla Climática 🌱 ¿Cuánto gastaste hoy en comida chatarra? ${badgeUrl}`
     );
     window.open(`https://wa.me/?text=${text}`, "_blank");
   }

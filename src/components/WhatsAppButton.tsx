@@ -1,7 +1,7 @@
 "use client";
 
 const MESSAGE =
-  "¿Cuánto gastaste hoy en snacks? 🌱 $20 van al clima. Dona a Semilla Climática: https://semillaclimatica.com/donar";
+  "¿Cuánto gastaste hoy en comida chatarra? 🌱 $20 van al clima. Dona a Semilla Climática: https://semillaclimatica.com/donar";
 
 export default function WhatsAppButton() {
   return (

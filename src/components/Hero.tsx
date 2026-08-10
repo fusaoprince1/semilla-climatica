@@ -23,16 +23,16 @@ export default function Hero() {
           </h1>
 
           <p className="text-on-wallpaper mt-6 text-lg leading-relaxed sm:text-xl">
-            Un fondo permanente para comprar soluciones hoy, crear las de
-            mañana, y exigir acción política real.
+            Un fondo permanente para crear soluciones hoy, y cambiar el
+            futuro de todos.
           </p>
 
           <p className="mt-4 text-base font-medium text-accent sm:text-lg">
-            ¿Cuánto gastaste hoy en snacks? $20 van al clima.
+            ¿Cuánto gastaste hoy en comida chatarra? $20 van al clima.
           </p>
 
           <p className="text-on-wallpaper-soft mt-2 text-sm font-medium">
-            Badge verificado + tu nombre en el Muro Digital al instante.
+            Badge verificado + tu nombre en el Muro Digital.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

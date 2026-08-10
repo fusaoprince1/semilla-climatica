@@ -13,7 +13,7 @@ export default function DonateCTA() {
               Planta tu semilla hoy
             </h2>
             <p className="mt-4 text-lg text-muted">
-              ¿Cuánto gastaste hoy en snacks?{" "}
+              ¿Cuánto gastaste hoy en comida chatarra?{" "}
               <span className="font-semibold text-accent">
                 $20 van al clima.
               </span>

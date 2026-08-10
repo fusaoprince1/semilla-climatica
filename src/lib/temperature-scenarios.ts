@@ -104,7 +104,7 @@ export const TEMPERATURE_SCENARIOS: TempScenario[] = [
     celsius: 2.6,
     label: "+2.6°C",
     status: "likely",
-    headline: "Colapso en cadena — camino actual hacia 2050–2070",
+    headline: "Colapso en cadena — camino actual hacia 2050",
     impacts: [
       "32 empresas de combustibles fósiles producen el 50% del CO₂ del planeta — y siguen expandiendo extracción.",
       "BP, Shell y Chevron abandonaron promesas de net zero; invierten más en petróleo que en renovables.",
@@ -119,7 +119,7 @@ export const TEMPERATURE_SCENARIOS: TempScenario[] = [
     celsius: 3.0,
     label: "+3.0°C",
     status: "catastrophic",
-    headline: "Catástrofe global — posible entre 2060 y 2080",
+    headline: "Catástrofe global — posible hacia 2060",
     impacts: [
       "Ola de calor tipo 2003 a +3°C: 32,000 muertes en una semana en Europa — comparable al pico de COVID-19.",
       "92% de probabilidad de ola de calor extrema en cualquier región del planeta en un año dado.",
@@ -141,7 +141,7 @@ export const TEMPERATURE_SCENARIOS: TempScenario[] = [
       "Extinción masiva de especies: ecosistemas enteros colapsan más rápido de lo que pueden adaptarse.",
       "Conflicto global por agua potable y tierra habitable; gobiernos colapsan en regiones ecuatoriales y costeras.",
       "Overshoot permanente: imposible volver a niveles seguros en siglos, aunque las emisiones se detengan.",
-      "En el peor escenario sin cambios: alcanzable hacia 2080–2100. Cada década de inacción lo acerca más.",
+      "En el peor escenario sin cambios: alcanzable hacia 2080. Cada década de inacción lo acerca más.",
     ],
     source: "IPCC AR6 / Potsdam Institute / Climatic Change",
   },

@@ -7,11 +7,11 @@ import { SECTION_WALLPAPERS } from "@/lib/section-images";
 export const metadata: Metadata = {
   title: "Donar",
   description:
-    "¿Cuánto gastaste hoy en snacks? $20 van al clima. Dona a Semilla Climática y recibe tu badge compartible.",
+    "¿Cuánto gastaste hoy en comida chatarra? $20 van al clima. Dona a Semilla Climática y recibe tu badge compartible.",
 };
 
 const HOOKS = [
-  "¿Cuánto gastaste hoy en snacks? $20 van al clima.",
+  "¿Cuánto gastaste hoy en comida chatarra? $20 van al clima.",
   "Menos que un Uber. Más impacto que ignorar el problema.",
   "El clima no espera",
   "Tu nombre en el Muro Digital — para siempre.",

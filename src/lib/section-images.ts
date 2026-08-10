@@ -22,8 +22,8 @@ export const SECTION_WALLPAPERS = {
     alt: "Pastizal soleado al atardecer con ganado a lo lejos en Texas",
   },
   thermometer: {
-    src: unsplash("photo-1611273426855-aa30be4ab7d6"),
-    alt: "Termómetro bajo sol intenso simbolizando calor extremo",
+    src: "/images/thermometer-planet-lava.jpg",
+    alt: "Planeta en estado de destrucción con ríos de lava y erupciones volcánicas",
   },
   plan: {
     src: unsplash("photo-1509391366360-2e959784a276"),
