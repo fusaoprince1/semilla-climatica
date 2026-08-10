@@ -36,19 +36,50 @@ export default function SectionBackdrop({
         aria-hidden
         data-section-backdrop
       >
-        <div
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat ${
-            brightImage === true
-              ? "saturate-[1.2] brightness-[1.22]"
-              : brightImage === "subtle"
-                ? "saturate-[1.14] brightness-[1.14]"
-                : "saturate-[1.12] brightness-[1.08]"
-          }`}
-          style={{
-            backgroundImage: `url("${wallpaper.src}")`,
-            backgroundPosition: imagePosition,
-          }}
-        />
+        {wallpaper.split ? (
+          <div className="absolute inset-0 flex">
+            <div
+              className={`h-full w-1/2 bg-cover bg-no-repeat ${
+                brightImage === true
+                  ? "saturate-[1.2] brightness-[1.22]"
+                  : brightImage === "subtle"
+                    ? "saturate-[1.14] brightness-[1.14]"
+                    : "saturate-[1.12] brightness-[1.08]"
+              }`}
+              style={{
+                backgroundImage: `url("${wallpaper.split.left.src}")`,
+                backgroundPosition: wallpaper.split.left.position ?? "center",
+              }}
+            />
+            <div
+              className={`h-full w-1/2 bg-cover bg-no-repeat ${
+                brightImage === true
+                  ? "saturate-[1.2] brightness-[1.22]"
+                  : brightImage === "subtle"
+                    ? "saturate-[1.14] brightness-[1.14]"
+                    : "saturate-[1.12] brightness-[1.08]"
+              }`}
+              style={{
+                backgroundImage: `url("${wallpaper.split.right.src}")`,
+                backgroundPosition: wallpaper.split.right.position ?? "center",
+              }}
+            />
+          </div>
+        ) : (
+          <div
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat ${
+              brightImage === true
+                ? "saturate-[1.2] brightness-[1.22]"
+                : brightImage === "subtle"
+                  ? "saturate-[1.14] brightness-[1.14]"
+                  : "saturate-[1.12] brightness-[1.08]"
+            }`}
+            style={{
+              backgroundImage: `url("${wallpaper.src}")`,
+              backgroundPosition: imagePosition,
+            }}
+          />
+        )}
         <div className={`absolute inset-0 ${overlayClass[overlay]}`} />
       </div>
       <div className="relative z-10">{children}</div>

@@ -5,6 +5,10 @@ function unsplash(photoId: string, width = 1920) {
 export type SectionWallpaper = {
   src: string;
   alt: string;
+  split?: {
+    left: { src: string; position?: string };
+    right: { src: string; position?: string };
+  };
 };
 
 /** Fotos de fondo por sección — Unsplash, uso libre en web */
@@ -27,7 +31,17 @@ export const SECTION_WALLPAPERS = {
   },
   plan: {
     src: unsplash("photo-1509391366360-2e959784a276"),
-    alt: "Campo de paneles solares al amanecer",
+    alt: "Paneles solares y Cámara de Diputados de México",
+    split: {
+      left: {
+        src: unsplash("photo-1509391366360-2e959784a276"),
+        position: "center",
+      },
+      right: {
+        src: "/images/camara-diputados.jpg",
+        position: "center top",
+      },
+    },
   },
   liveDonors: {
     src: unsplash("photo-1560493676-04071c5f467b"),

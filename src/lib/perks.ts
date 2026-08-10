@@ -75,7 +75,7 @@ export const PUBLIC_PROMISES = {
   certificateFrom: 150,
   founderFrom: 500,
   muralNote:
-    "El mural conmemorativo en Reforma es meta de Fase 3, sujeto a permisos oficiales y alcance del fondo.",
+    "El mural en Reforma es meta de Fase 3, sujeto a permisos oficiales y alcance del fondo.",
   reportsNote:
     "Reportes trimestrales se publicarán al alcanzar $50,000 MXN recaudados.",
 } as const;

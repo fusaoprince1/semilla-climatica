@@ -104,17 +104,17 @@ export const PLAN_PHASES = [
   },
   {
     phase: 2,
-    title: "Crear tecnología",
+    title: "Influir políticamente",
     description:
-      "Con fondos suficientes, desarrollamos nuestra propia I+D climática adaptada a las realidades de México.",
-    icon: "flask",
+      "Construimos voz en México exclusivamente en cuestiones climáticas: propuestas, advocacy y presión legislativa real.",
+    icon: "landmark",
   },
   {
     phase: 3,
-    title: "Influir políticamente",
+    title: "Cambiamos la realidad",
     description:
-      "Construimos voz en México exclusivamente en cuestiones climáticas: propuestas, advocacy y el mural conmemorativo en Reforma.",
-    icon: "landmark",
+      "Soluciones activas y leyes movidas: el clima deja de ser promesa y se vuelve la nueva normalidad del país.",
+    icon: "sparkles",
   },
 ];
 
