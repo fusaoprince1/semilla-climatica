@@ -317,6 +317,17 @@ export default function ClimateThermometer() {
           </strong>{" "}
           Por eso Semilla Climática.
         </p>
+
+        <div className="mx-auto mt-8 max-w-2xl text-center">
+          <h2 className="text-on-wallpaper font-display text-3xl font-bold sm:text-4xl">
+            El clima no espera
+          </h2>
+          <p className="text-on-wallpaper mx-auto mt-4 max-w-xl text-lg font-medium leading-relaxed sm:text-xl">
+            No podemos cambiar todos los factores geopolíticos, pero el
+            calentamiento global es la batalla que no podemos posponer. ¡Actúa
+            ya!
+          </p>
+        </div>
       </div>
     </SectionBackdrop>
   );

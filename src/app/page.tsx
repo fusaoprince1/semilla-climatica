@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import Problem from "@/components/Problem";
 import ClimateThermometer from "@/components/ClimateThermometer";
 import ExtremeWeather from "@/components/ExtremeWeather";
 import Plan from "@/components/Plan";
@@ -13,7 +12,6 @@ export default function Home() {
     <>
       <Hero />
       <ClimateThermometer />
-      <Problem />
       <ExtremeWeather />
       <Plan />
       <LiveDonors />

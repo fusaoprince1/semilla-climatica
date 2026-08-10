@@ -6,7 +6,6 @@ import { Leaf, Menu, X } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
 const links = [
-  { href: "/#problema", label: "El problema" },
   { href: "/#termometro", label: "Termómetro" },
   { href: "/#plan", label: "Nuestro plan" },
   { href: "/transparencia", label: "Transparencia" },
