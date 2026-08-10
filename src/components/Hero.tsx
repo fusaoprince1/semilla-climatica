@@ -24,7 +24,7 @@ export default function Hero() {
 
           <p className="text-on-wallpaper mt-6 text-lg leading-relaxed sm:text-xl">
             Un fondo permanente para crear soluciones hoy, y cambiar el
-            futuro de todos.
+            futuro.
           </p>
 
           <p className="mt-4 text-base font-medium text-accent sm:text-lg">

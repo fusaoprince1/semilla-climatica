@@ -2,7 +2,7 @@ export const SITE = {
   name: "Semilla Climática",
   tagline: "Un fondo permanente para el clima en México",
   description:
-    "Construimos un fondo climático permanente para crear soluciones hoy, y cambiar el futuro de todos en México.",
+    "Construimos un fondo climático permanente para crear soluciones hoy, y cambiar el futuro en México.",
   url: "https://semillaclimatica.com",
 };
 
