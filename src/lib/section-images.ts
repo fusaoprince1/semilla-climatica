@@ -30,7 +30,6 @@ export const SECTION_WALLPAPERS = {
   thermometer: {
     src: "/images/thermometer-planet-lava.jpg",
     alt: "Planeta en estado de destrucción con ríos de lava y erupciones volcánicas",
-    backgroundSize: "92%",
   },
   plan: {
     src: unsplash("photo-1509391366360-2e959784a276"),
