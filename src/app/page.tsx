@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Problem />
       <ClimateThermometer />
+      <Problem />
       <ExtremeWeather />
       <Plan />
       <LiveDonors />

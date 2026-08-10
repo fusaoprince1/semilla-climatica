@@ -18,7 +18,8 @@ export default function Problem() {
           </h2>
           <p className="text-on-wallpaper mx-auto mt-4 max-w-xl text-lg font-medium leading-relaxed sm:text-xl">
             No podemos cambiar todos los factores geopolíticos, pero el
-            calentamiento global es la batalla que no podemos posponer.
+            calentamiento global es la batalla que no podemos posponer. ¡Actúa
+            ya!
           </p>
         </div>
 

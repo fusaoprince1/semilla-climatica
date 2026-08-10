@@ -98,7 +98,7 @@ export const TEMPERATURE_SCENARIOS: TempScenario[] = [
     celsius: 2.6,
     label: "+2.6°C",
     status: "likely",
-    headline: "Trayectoria con políticas actuales — 2100",
+    headline: "Colapso en cadena — el camino que llevamos",
     impacts: [
       "9+ puntos de inflexión activados; riesgo de colapso en cadena (efecto dominó).",
       "32 empresas de combustibles fósiles emiten la mitad del CO₂ del planeta — y expanden producción.",
