@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
+import ClimateThermometer from "@/components/ClimateThermometer";
 import ExtremeWeather from "@/components/ExtremeWeather";
 import Plan from "@/components/Plan";
 import TransparencyPreview from "@/components/TransparencyPreview";
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <Hero />
       <Problem />
+      <ClimateThermometer />
       <ExtremeWeather />
       <Plan />
       <LiveDonors />
