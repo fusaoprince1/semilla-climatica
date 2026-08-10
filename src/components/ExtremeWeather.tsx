@@ -24,9 +24,9 @@ export default function ExtremeWeather() {
             No es solo calor
           </h2>
           <p className="text-on-wallpaper mx-auto mt-4 max-w-xl text-lg font-medium leading-relaxed sm:text-xl">
-            El cambio climático también trae lluvias torrenciales, inundaciones
-            y huracanes cada vez más intensos, además parece subreal pero hay
-            más terremotos y erupciones volcánicas.
+            El cambio climático trae lluvias torrenciales, inundaciones y
+            huracanes cada vez más intensos. Y al mismo tiempo, el planeta sigue
+            temblando y ardiendo — Venezuela y Guatemala lo vivieron en 2026.
           </p>
         </div>
 

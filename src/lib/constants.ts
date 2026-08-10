@@ -99,7 +99,7 @@ export const PLAN_PHASES = [
     phase: 1,
     title: "Comprar tecnología",
     description:
-      "Adquirimos y desplegamos soluciones existentes: paneles solares comunitarios, captura de CO₂, reforestación y tech de eficiencia energética.",
+      "Adquirimos, desplegamos y desarrollamos soluciones: paneles solares comunitarios, captura de CO₂, reforestación y tech de eficiencia energética.",
     icon: "zap",
   },
   {

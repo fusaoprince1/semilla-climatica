@@ -17,7 +17,7 @@ export default async function Plan() {
       phase: 1,
       title: "Comprar tecnología",
       description:
-        "Adquirimos y desplegamos soluciones existentes: paneles solares comunitarios, captura de CO₂, reforestación y tech de eficiencia energética.",
+        "Adquirimos, desplegamos y desarrollamos soluciones: paneles solares comunitarios, captura de CO₂, reforestación y tech de eficiencia energética.",
       icon: "zap" as const,
     },
     {
@@ -50,8 +50,7 @@ export default async function Plan() {
             Nuestro plan en 3 fases
           </h2>
           <p className="text-on-wallpaper-soft mt-4 text-lg leading-relaxed">
-            Comprar, crear e influir. Un camino claro de acción climática en
-            México.
+            Acción e influir. Un camino claro.
           </p>
         </div>
 
