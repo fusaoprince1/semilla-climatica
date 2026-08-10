@@ -315,7 +315,7 @@ export default function ClimateThermometer() {
           <strong className="text-accent">
             Cada grado que sube el termómetro cuesta vidas.
           </strong>{" "}
-          Por eso Semilla Climática existe.
+          Por eso Semilla Climática.
         </p>
       </div>
     </SectionBackdrop>
