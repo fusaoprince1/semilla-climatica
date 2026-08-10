@@ -25,7 +25,8 @@ export default function ExtremeWeather() {
           </h2>
           <p className="text-on-wallpaper mx-auto mt-4 max-w-xl text-lg font-medium leading-relaxed sm:text-xl">
             El cambio climático también trae lluvias torrenciales, inundaciones
-            y huracanes cada vez más intensos.
+            y huracanes cada vez más intensos, además parece subreal pero hay
+            más terremotos y erupciones volcánicas.
           </p>
         </div>
 

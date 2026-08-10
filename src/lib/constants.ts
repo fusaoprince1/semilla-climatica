@@ -58,18 +58,18 @@ export const EXTREME_WEATHER_STATS = [
     source: "SMN / NOAA",
   },
   {
-    value: "Más",
-    label: "Lluvias torrenciales",
+    value: "M 7.5",
+    label: "Terremoto de Venezuela, 2026",
     detail:
-      "Una atmósfera más caliente retiene más humedad: cuando llueve, llueve con fuerza. Inundaciones en horas, no en días.",
-    source: "IPCC / CONAGUA",
+      "El 24 de junio de 2026, dos sismos de magnitud 7,2 y 7,5 sacudieron el norte del país en menos de 40 segundos — el más potente registrado desde 1900.",
+    source: "USGS",
   },
   {
-    value: "2 caras",
-    label: "Mismo cambio climático",
+    value: "50 h",
+    label: "Erupción Volcán de Fuego, Guatemala",
     detail:
-      "Sequía en una región e inundaciones en otra. No se contradicen: son el mismo patrón de clima fuera de control.",
-    source: "INECC",
+      "En agosto de 2026, más de 50 horas de actividad intensa evacuaron a 1,700 personas y afectaron a 29,000 habitantes con ceniza y flujos piroclásticos.",
+    source: "INSIVUMEH / CONRED",
   },
 ];
 
