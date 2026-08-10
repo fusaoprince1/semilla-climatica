@@ -67,7 +67,9 @@ export default function SectionBackdrop({
           </div>
         ) : (
           <div
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat ${
+            className={`absolute inset-0 bg-center bg-no-repeat ${
+              wallpaper.backgroundSize ? "" : "bg-cover"
+            } ${
               brightImage === true
                 ? "saturate-[1.2] brightness-[1.22]"
                 : brightImage === "subtle"
@@ -77,6 +79,9 @@ export default function SectionBackdrop({
             style={{
               backgroundImage: `url("${wallpaper.src}")`,
               backgroundPosition: imagePosition,
+              ...(wallpaper.backgroundSize
+                ? { backgroundSize: wallpaper.backgroundSize }
+                : {}),
             }}
           />
         )}

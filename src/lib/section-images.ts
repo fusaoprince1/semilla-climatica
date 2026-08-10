@@ -5,6 +5,8 @@ function unsplash(photoId: string, width = 1920) {
 export type SectionWallpaper = {
   src: string;
   alt: string;
+  /** Por debajo de 100% aleja la imagen (p. ej. "92%"). Por defecto: cover. */
+  backgroundSize?: string;
   split?: {
     left: { src: string; position?: string };
     right: { src: string; position?: string };
@@ -28,6 +30,7 @@ export const SECTION_WALLPAPERS = {
   thermometer: {
     src: "/images/thermometer-planet-lava.jpg",
     alt: "Planeta en estado de destrucción con ríos de lava y erupciones volcánicas",
+    backgroundSize: "92%",
   },
   plan: {
     src: unsplash("photo-1509391366360-2e959784a276"),
