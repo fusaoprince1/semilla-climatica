@@ -4,7 +4,6 @@ import ExtremeWeather from "@/components/ExtremeWeather";
 import Plan from "@/components/Plan";
 import TransparencyPreview from "@/components/TransparencyPreview";
 import Rewards from "@/components/Rewards";
-import LiveDonors from "@/components/LiveDonors";
 import DonateCTA from "@/components/DonateCTA";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
       <ClimateThermometer />
       <ExtremeWeather />
       <Plan />
-      <LiveDonors />
       <TransparencyPreview />
       <Rewards />
       <DonateCTA />
