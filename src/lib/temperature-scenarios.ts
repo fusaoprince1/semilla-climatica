@@ -166,6 +166,29 @@ export function tempToPercent(temp: number): number {
   return ((temp - TEMP_MIN) / (TEMP_MAX - TEMP_MIN)) * 100;
 }
 
+/** Altura usable del tubo (px) — debe coincidir con ClimateThermometer */
+export const THERMOMETER_TUBE_INNER_PX = 348;
+export const THERMOMETER_BULB_PX = 64;
+export const THERMOMETER_TUBE_PADDING_PX = 4;
+
+/** Posición desde abajo del track hasta la marca de temperatura */
+export function tempToBottomPx(temp: number): number {
+  const clamped = Math.min(TEMP_MAX, Math.max(TEMP_MIN, temp));
+  const fillRatio = (clamped - TEMP_MIN) / (TEMP_MAX - TEMP_MIN);
+  return (
+    THERMOMETER_BULB_PX +
+    THERMOMETER_TUBE_PADDING_PX +
+    fillRatio * THERMOMETER_TUBE_INNER_PX
+  );
+}
+
+/** Altura del mercurio dentro del tubo */
+export function tempToMercuryHeightPx(temp: number): number {
+  const clamped = Math.min(TEMP_MAX, Math.max(TEMP_MIN, temp));
+  const fillRatio = (clamped - TEMP_MIN) / (TEMP_MAX - TEMP_MIN);
+  return fillRatio * THERMOMETER_TUBE_INNER_PX;
+}
+
 export function percentToTemp(percent: number): number {
   const clamped = Math.min(100, Math.max(0, percent));
   return TEMP_MIN + (clamped / 100) * (TEMP_MAX - TEMP_MIN);

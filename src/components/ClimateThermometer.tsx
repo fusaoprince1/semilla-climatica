@@ -14,6 +14,8 @@ import {
   TEMP_MIN,
   getNearestScenario,
   percentToTemp,
+  tempToBottomPx,
+  tempToMercuryHeightPx,
   tempToPercent,
 } from "@/lib/temperature-scenarios";
 
@@ -27,7 +29,8 @@ export default function ClimateThermometer() {
   const [selectedTemp, setSelectedTemp] = useState(CURRENT_GLOBAL_TEMP);
 
   const scenario = getNearestScenario(selectedTemp);
-  const fillPercent = tempToPercent(selectedTemp);
+  const mercuryHeightPx = tempToMercuryHeightPx(selectedTemp);
+  const markerBottomPx = tempToBottomPx(selectedTemp);
   const statusColor = STATUS_COLORS[scenario.status];
 
   const updateFromPointer = useCallback((clientY: number) => {
@@ -139,7 +142,7 @@ export default function ClimateThermometer() {
                   <div
                     className="absolute inset-x-1 bottom-1 rounded-full transition-[height] duration-200 ease-out"
                     style={{
-                      height: `${fillPercent}%`,
+                      height: `${mercuryHeightPx}px`,
                       background:
                         selectedTemp >= 3
                           ? "linear-gradient(to top, #E53935, #FF1744)"
@@ -165,7 +168,7 @@ export default function ClimateThermometer() {
                 {/* Marcador posición actual global */}
                 <div
                   className="pointer-events-none absolute right-0 left-0 flex items-center"
-                  style={{ bottom: `calc(${tempToPercent(CURRENT_GLOBAL_TEMP)}% + 64px)` }}
+                  style={{ bottom: `${tempToBottomPx(CURRENT_GLOBAL_TEMP)}px` }}
                 >
                   <div className="h-0.5 flex-1 bg-white/80" />
                   <span className="ml-2 whitespace-nowrap rounded border border-white/30 bg-white/15 px-1.5 py-0.5 text-[10px] font-bold text-white shadow-sm">
@@ -176,7 +179,7 @@ export default function ClimateThermometer() {
                 {/* Handle arrastrable */}
                 <div
                   className="pointer-events-none absolute right-[-6px] left-[-6px] flex items-center transition-[bottom] duration-200 ease-out"
-                  style={{ bottom: `calc(${fillPercent}% + 56px)` }}
+                  style={{ bottom: `${markerBottomPx}px` }}
                 >
                   <div
                     className="h-5 w-full rounded-full border-2 border-white/90 shadow-lg"
@@ -191,7 +194,7 @@ export default function ClimateThermometer() {
                     type="button"
                     className="absolute right-[-28px] z-10 flex h-6 w-6 items-center justify-center rounded-full border border-border bg-surface text-[9px] font-bold transition hover:scale-110 hover:border-accent"
                     style={{
-                      bottom: `calc(${tempToPercent(s.celsius)}% + 58px)`,
+                      bottom: `${tempToBottomPx(s.celsius)}px`,
                       color:
                         Math.abs(selectedTemp - s.celsius) < 0.05
                           ? statusColor

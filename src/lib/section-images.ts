@@ -16,8 +16,8 @@ export type SectionWallpaper = {
 /** Fotos de fondo por sección — Unsplash, uso libre en web */
 export const SECTION_WALLPAPERS = {
   hero: {
-    src: unsplash("photo-1559827260-dc66d52bef19"),
-    alt: "Paisaje montañoso en México",
+    src: "/images/vertedero-camino-basura.jpg",
+    alt: "Vertedero de basura con montañas de desechos y humo al horizonte",
   },
   extremeWeather: {
     src: "/images/extreme-weather-coast.jpg",
