@@ -7,14 +7,14 @@ import { SECTION_WALLPAPERS } from "@/lib/section-images";
 export const metadata: Metadata = {
   title: "Donar",
   description:
-    "¿Cuánto gastaste hoy en comida chatarra? $20 van al clima. Dona a Semilla Climática y recibe tu badge compartible.",
+    "Cambia tu futuro: $20 van al clima. Dona a Semilla Climática y ayuda a tomar acción contra el cambio climático.",
 };
 
 const HOOKS = [
-  "¿Cuánto gastaste hoy en comida chatarra? $20 van al clima.",
-  "Menos que un Uber. Más impacto que ignorar el problema.",
+  "Cambia tu futuro. $20 van al clima.",
+  "Más impacto que ignorar el problema.",
   "El clima no espera",
-  "Tu nombre en el Muro Digital — para siempre.",
+  "Tu nombre en el Muro Digital — tú estuviste aquí.",
 ];
 
 export default function DonarPage() {
@@ -33,8 +33,7 @@ export default function DonarPage() {
             {HOOKS[0]}
           </p>
           <p className="text-on-wallpaper-soft mt-2 text-sm sm:text-base">
-            Desde $20 recibes un badge compartible y tu nombre en el Muro
-            Digital automáticamente.
+            Desde $20 ayudas a tomar acción contra el cambio climático.
           </p>
         </div>
 
