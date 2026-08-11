@@ -7,11 +7,11 @@ import { SECTION_WALLPAPERS } from "@/lib/section-images";
 export const metadata: Metadata = {
   title: "Donar",
   description:
-    "Cambia tu futuro: $20 van al clima. Dona a Semilla Climática y ayuda a tomar acción contra el cambio climático.",
+    "Cambia el futuro: $20 van al clima. Dona a Semilla Climática y ayuda a tomar acción contra el cambio climático.",
 };
 
 const HOOKS = [
-  "Cambia tu futuro. $20 van al clima.",
+  "Cambia el futuro. $20 van al clima.",
   "Más impacto que ignorar el problema.",
   "El clima no espera",
   "Tu nombre en el Muro Digital — tú estuviste aquí.",
