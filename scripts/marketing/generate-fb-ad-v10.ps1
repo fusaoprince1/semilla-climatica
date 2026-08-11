@@ -20,11 +20,11 @@ if (-not (Test-Path (Join-Path $ImgDir "artemis-earth-moon.jpg"))) {
   Copy-Item (Join-Path $OutDir "tmp-v5\images\*") -Destination $ImgDir -Force -ErrorAction SilentlyContinue
   Copy-Item (Join-Path $OutDir "tmp-v4\images\*") -Destination $ImgDir -Force -ErrorAction SilentlyContinue
   $assets = "C:\Users\julio\.cursor\projects\c-Proyectos-misitio\assets"
-  Copy-Item "$assets\palestina-guerra-2026.jpg","$assets\sequia-calor-extremo.jpg","$assets\ucrania-rusia-guerra.jpg" -Destination $ImgDir -Force -ErrorAction SilentlyContinue
+  Copy-Item "$assets\palestina-guerra-2026.jpg","$assets\sequia-calor-extremo.jpg","$assets\guerra-bombardeos-misiles.jpg" -Destination $ImgDir -Force -ErrorAction SilentlyContinue
 }
 
-if (-not (Test-Path (Join-Path $ImgDir "ucrania-rusia-guerra.jpg"))) {
-  Copy-Item (Join-Path $OutDir "tmp-v10\images\ucrania-rusia-guerra.jpg") -Destination (Join-Path $ImgDir "ucrania-rusia-guerra.jpg") -Force -ErrorAction SilentlyContinue
+if (-not (Test-Path (Join-Path $ImgDir "guerra-bombardeos-misiles.jpg"))) {
+  Copy-Item (Join-Path $OutDir "tmp-v10\images\guerra-bombardeos-misiles.jpg") -Destination (Join-Path $ImgDir "guerra-bombardeos-misiles.jpg") -Force -ErrorAction SilentlyContinue
 }
 
 $PathImage = Join-Path $ImgDir "vertedero-camino-basura-v7.jpg"
@@ -152,7 +152,7 @@ New-StoryImage -Image (Join-Path $ImgDir "iran-guerra-2026.jpg") -Out (Join-Path
   -Texts @("En medio de guerras y conflictos","geopoliticos que parecen nunca acabar") -Sizes @("40","40")
 New-StoryImage -Image (Join-Path $ImgDir "palestina-guerra-2026.jpg") -Out (Join-Path $TmpDir "s02.mp4") -Static `
   -Texts @("existe algo que todos pasan por alto") -Sizes @("42")
-New-StoryImage -Image (Join-Path $ImgDir "ucrania-rusia-guerra.jpg") -Out (Join-Path $TmpDir "s03.mp4") -Static `
+New-StoryImage -Image (Join-Path $ImgDir "guerra-bombardeos-misiles.jpg") -Out (Join-Path $TmpDir "s03.mp4") -Static `
   -Texts @("un impacto irreversible","si no hacemos algo") -Sizes @("44","44") -Colors @("0xF4A024","white")
 New-StoryImage -Image (Join-Path $ImgDir "artemis-earth-moon.jpg") -Out (Join-Path $TmpDir "s04.mp4") -Static `
   -TopLine1 "ABR 2026  ARTEMIS II" -TopLine2 "Foto real Artemis II - Tierra desde la Luna" `
